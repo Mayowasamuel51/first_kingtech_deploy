@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+    font-family: "Poppins";
+    scroll-behavior: auto;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+@layer base {
+    :root {
+        /* --color-primary: #f97316; */
+        --color-secondary: #7b61ff;
+        --color-heading: #f5f5f7;
+        /* --color-text: rgba(255, 255, 255, 0.6);
+        --color-background: #090909; */
+        /* font-size: 55.5%; */
+      }
+}
+
+@layer utilities {
+
+    /* This two helpers apply a -50% to the translate x/y, and add
+       * a --y/--x css variable to it. This util is only here to make writing this class
+       * a bit easier to read in the HTML :)   */
+    .translate-y-centered-offset {
+        @apply translate-y-[calc(-50%_+_var(--y))];
+    }
+
+    .translate-x-centered-offset {
+        @apply translate-x-[calc(-50%_+_var(--x))];
+    }
+}
+
+.homeBody {
+    background-image: linear-gradient(to bottom, #ffffff 0%, #e2e8f0 99%);
+}
+
+.boxShadow {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.border-radius {
+    border-radius: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
