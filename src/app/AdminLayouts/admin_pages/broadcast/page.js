@@ -1,6 +1,5 @@
 import React from 'react'
-import Broadcast from '@/app/Admin/Broadcast'
-
+import Broadcast from '../../Admin/Broadcast'
 const page = () => {
   return (
     <div>
