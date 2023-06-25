@@ -63,7 +63,7 @@ export default function Contact() {
         // const res = await response.json()
         // console.log('worked.....................')
         // return res;\
-        axios.post(`/api/Admins/contact`, data)
+        axios.post(`https://first-kingtech-deploy.vercel.app/api/Admins/contact`, data)
             .then(() => console.log('worked')).catch((err) => console.log(err))
     }
     return (
