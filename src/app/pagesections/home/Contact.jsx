@@ -1,15 +1,24 @@
 'use client'
+import supportsColor from "supports-color"
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid"
 import axios from "axios"
 import React, { useState } from "react"
 import { FaWhatsapp } from "react-icons/fa"
-import { Notyf } from 'notyf';
-import 'notyf/notyf.min.css'; // for React, Vue and Svelte
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+// import { Notyf } from 'notyf';
+// import 'notyf/notyf.min.css'; // for React, Vue and Svelte
 import Head from "next/head"
 import SectionWrapper from "@/app/components/SectionWrapper"
- function Contact() {
+function Contact() {
+    const notify = () => toast.error("Error Notification !", {
+        position: toast.POSITION.TOP_LEFT
+    });
+    const good= () => toast.success(" Our representatives will respond to you soon !", {
+        position: toast.POSITION.TOP_LEFT
+      });
     const [error, setError] = useState(null)
-    const notyf = new Notyf();
+    // const notyf = new Notyf();
     const contactList = [
         {
             id: 1,
@@ -61,19 +70,20 @@ import SectionWrapper from "@/app/components/SectionWrapper"
                     alert('missing feild')
                     setError('Network error')
                 }
-
-                notyf.success('Thank you for your contact request. Our representatives will respond to you soon')
+                good()
+                // notyf.success('Thank you for your contact request. Our representatives will respond to you soon')
                 console.log('worked')
             }
             ).catch((err) => {
-                notyf.error('Network issues')
+                // notyf.error('Network issues')
                 console.log(err)
+                notify()
                 setError('Network error')
             }
             )
     }
     return (
-        <Head>
+       
             <section id="contact" className=" bg-black px-5 py-7 md:px-14 md:py-14">
                 <div className=" flex flex-col gap-y-5 items-center mb-10 lg:mb-16">
                     <h1 className=" text-white capitalise text-xl font-semibold md:text-3xl">
@@ -126,7 +136,8 @@ import SectionWrapper from "@/app/components/SectionWrapper"
                             <input type="email" onChange={inputHandle} value={input.email} name="email" placeholder="Email" className=" form-input rounded-md" />
                             <input type="number" onChange={inputHandle} value={input.phone} required name="phone" placeholder="Phone Number" className=" form-input rounded-md" />
                             <textarea name="message" placeholder=" Type your message here" onChange={inputHandle} value={input.message} className="w-full form-textarea rounded-md"></textarea>
-                            <button
+                            <ToastContainer/>    
+                        <button
                                 type="submit"
                                 className="bg-orange-500 text-white w-fit py-2 px-6 rounded-md duration-300 ease-in-out hover:bg-black">
                                 Submit
@@ -135,7 +146,7 @@ import SectionWrapper from "@/app/components/SectionWrapper"
                     </div>
                 </div>
             </section>
-        </Head>
+       
     )
 }
-export default SectionWrapper(Contact)
+export default Contact

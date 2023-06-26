@@ -1,12 +1,22 @@
 'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { UserIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid'
 import axios from "axios"
 import React, { useState } from "react"
 import signup from '../../../public/images/signup.png'
 import SectionWrapper from '../components/SectionWrapper'
+import { useRouter } from 'next/navigation';
 const Signup = () => {
+    const router = useRouter()
+    const notify = () => toast.error("Error refresh your page !", {
+        position: toast.POSITION.TOP_LEFT
+    });
+    const good= () => toast.success(" Our representatives will respond to you soon !", {
+        position: toast.POSITION.TOP_LEFT
+      });
     const [input, setInput] = useState({
         username: '',
         password: '',
@@ -22,9 +32,15 @@ const Signup = () => {
             email: input.email,
             password: input.password
         }
-        axios.post(`/api/StudentsApi/register`, data)
-            .then(() => console.log('worked......'))
-            .catch((err) => console.log(err))
+        axios.post(`http://localhost:3000/api/register`, data)
+            .then(() => {
+                router.push('http://localhost:3000/signin')
+                console.log('worked......')
+            })
+            .catch((err) => {
+                notify()
+                console.log(err)
+            })
     }
     return (
         <section className=' bg-orange-50 min-h-screen flex flex-col justify-center items-center px-5 pt-28 md:px-14'>

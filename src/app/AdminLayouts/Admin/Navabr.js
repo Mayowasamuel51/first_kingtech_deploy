@@ -27,10 +27,10 @@ const Navabr = () => {
           {/* <Searchbar /> */}
           <div className="w-full md:flex gap-10 items-center justify-center hidden">
             <Link href="/" className="text-base">
-              Add Course
+              Register Students
             </Link>
             <Link href="/admin_pages" className="text-base">
-              See All Students
+            Form Contacts
             </Link>
             <Link href="/admin_pages/broadcast" className="text-base">
               Broadcast Messsage

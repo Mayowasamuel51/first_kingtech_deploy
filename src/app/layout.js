@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Head from "next/head";
+import supportsColor from "supports-color"
 // components
 import Footer from './components/Footer'
 import Header from './components/Header'
