@@ -7,9 +7,9 @@ const SectionWrapper = (Component) =>
     return (
       <>
         <Header />
-        <div>
+        {/* <div> */}
           <Component />
-        </div>
+        {/* </div> */}
         <Footer />
       </>
     );

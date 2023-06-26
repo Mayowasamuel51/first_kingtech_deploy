@@ -1,11 +1,11 @@
 import Experts from "../components/Experts"; 
 import SectionWrapper from "../components/SectionWrapper";
-import Banner from "../page sections/cybersecurity/Banner";
-import CourseDetails from "../page sections/cybersecurity/CourseDetails";
-import Eligibility from "../page sections/cybersecurity/Eligibility";
-import Outline from "../page sections/cybersecurity/Outline";
-import Topics from "../page sections/cybersecurity/Topics";
-import Contact from "../page sections/home/Contact";
+import Banner from "../pagesections/cybersecurity/Banner";
+import CourseDetails from "../pagesections/cybersecurity/CourseDetails";
+import Eligibility from "../pagesections/cybersecurity/Eligibility";
+import Outline from "../pagesections/cybersecurity/Outline";
+import Topics from "../pagesections/cybersecurity/Topics";
+import Contact from "../pagesections/home/Contact";
 function Cybersecurity() {
     return (
         <main>

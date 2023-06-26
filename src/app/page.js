@@ -1,17 +1,17 @@
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import NotificationPopup from "./components/Popup";
-import About from "./page sections/home/About";
-import Apply from "./page sections/home/Apply";
-import Banner from "./page sections/home/Banner";
-import Benefits from "./page sections/home/Benefits";
-import Contact from "./page sections/home/Contact";
-import CourseHighlight from "./page sections/home/CourseHighlight";
-import Instructors from "./page sections/home/Instructors";
-import Kingship from "./page sections/home/Kingship";
-import Mentorship from "./page sections/home/Mentorship";
-import Testimonials from "./page sections/home/Testimonials";
-import Why from "./page sections/home/Why";
+import About from "./pagesections/home/About";
+import Apply from "./pagesections/home/Apply";
+import Banner from "./pagesections/home/Banner";
+import Benefits from "./pagesections/home/Benefits";
+import Contact from "./pagesections/home/Contact";
+import CourseHighlight from "./pagesections/home/CourseHighlight";
+import Instructors from "./pagesections/home/Instructors";
+import Kingship from "./pagesections/home/Kingship";
+import Mentorship from "./pagesections/home/Mentorship";
+import Testimonials from "./pagesections/home/Testimonials";
+import Why from "./pagesections/home/Why";
 
 
 export default function Home() {

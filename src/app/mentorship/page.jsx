@@ -8,7 +8,7 @@ import {
 import { SlScreenDesktop } from "react-icons/sl";
 import SectionWrapper from "../components/SectionWrapper";
 import Experts from "../components/Experts";
-import Contact from "../page sections/home/Contact";
+import Contact from "../pagesections/home/Contact";
 
 const Mentorship = () => {
   return (
@@ -115,4 +115,4 @@ const Mentorship = () => {
   );
 };
 
-export default SectionWrapper( Mentorship);
+export default SectionWrapper(Mentorship);

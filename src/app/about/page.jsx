@@ -1,10 +1,10 @@
-import Collaboration from "../page sections/about/Collaboration";
-import Features from "../page sections/about/Features";
-import Hero from "../page sections/about/Hero";
-import SamePage from "../page sections/about/SamePage";
-import Streamlined from "../page sections/about/Streamlined";
-import Testing from "../page sections/about/Testing";
-import Title from "../page sections/about/mobile-view/Title";
+import Collaboration from "../pagesections/about/Collaboration";
+import Features from "../pagesections/about/Features";
+import Hero from "../pagesections/about/Hero";
+import SamePage from "../pagesections/about/SamePage";
+import Streamlined from "../pagesections/about/Streamlined";
+import Testing from "../pagesections/about/Testing";
+import Title from "../pagesections/about/mobile-view/Title";
 
 export default function About() {
     return (
