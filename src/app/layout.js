@@ -5,6 +5,7 @@ import supportsColor from "supports-color"
 // components
 import Footer from './components/Footer'
 import Header from './components/Header'
+import Provider from './SessionProvider';
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Kingship Technologies',
@@ -26,7 +27,10 @@ export default function RootLayout({ children }) {
       </Head> */}
       <body className={inter.className}>
         {/* <Header /> */}
-        {children}
+        <Provider>
+          {children}
+      
+        </Provider>
         {/* <Footer /> */}
       </body>
     </html>

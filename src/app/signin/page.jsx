@@ -1,12 +1,42 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useSession, signIn, signOut } from 'next-auth/react'
 // library
 import { EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid'
 import SectionWrapper from '../components/SectionWrapper'
 import signin from '../../../public/images/signin.png'
+import { useEffect, useState } from 'react'
+import { useRouter } from "next/navigation"
 
 const Signin = () => {
+    const session = useSession()
+    const router = useRouter()
+    const [data, setData] = useState({
+            email: '',
+            password: ''
+            })
+    useEffect(() => {
+        if (session?.status === 'authenticated') {
+           router.push('/dashboard') 
+        }
+    })
 
+    const loginUser = async (e) => {
+        e.preventDefault()
+        signIn('credentials',
+         {...data, redirect: false
+        })
+        .then((callback) => {
+            if (callback?.error) {
+                toast.error(callback.error)
+            }
+
+            if(callback?.ok && !callback?.error) {
+                toast.success('Logged in successfully!')
+            }
+        } )
+    }
     return (
         <section className=' bg-orange-50 min-h-screen flex flex-col justify-center items-center px-5 pt-28 md:px-14'>
             <div className=' grid grid-cols-1 gap-y-5 lg:grid-cols-2 lg:gap-x-5 lg:items-center lg:max-w-screen-lg lg:mx-auto'>
@@ -18,25 +48,30 @@ const Signin = () => {
                         Sign In
                     </h1>
 
-                    <form
+                    <form  onSubmit={loginUser}
                         className=' flex flex-col items-center gap-y-5'
                     >
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <EnvelopeIcon width={25} className=' text-gray-500' />
-                            <input type="email" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter email address' />
+                            <input type="email" name='email' className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter email address '  value={data.email}
+                    onChange={e => setData({ ...data, email: e.target.value })} />
                         </div>
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <LockClosedIcon width={25} className=' text-gray-500' />
-                            <input type="password" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password' />
+                            <input type="password"  name="password"className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password'  value={data.password}
+                    onChange={e => setData({ ...data, password: e.target.value })}/>
                         </div>
                         <button className=' bg-orange-500 py-2 rounded-lg text-white font-medium mt-10 w-full lg:hover:bg-opacity-90'>
                             Login
                         </button>
-                        <span>OR</span>
-                        <button className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                        {/* <span>OR</span> */}
+                        {/* <button onClick={signIn_user} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                            Sign in with Google
+                        </button> */}
+                    </form>
+                    <button onClick={() => signIn('google')} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
                             Sign in with Google
                         </button>
-                    </form>
 
                     <p className=' text-sm text-gray-500 text-center lg:text-base'>
                         Don't have an account? <Link href="signup" className=' text-orange-500'>Sign Up</Link>
