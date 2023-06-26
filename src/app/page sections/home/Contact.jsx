@@ -4,8 +4,10 @@ import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid"
 import axios from "axios"
 import React, { useState } from "react"
 import { FaWhatsapp } from "react-icons/fa"
-
+import { Notyf } from 'notyf';
+import 'notyf/notyf.min.css'; // for React, Vue and Svelte
 export default function Contact() {
+    const notyf = new Notyf();
     const contactList = [
         {
             id: 1,
@@ -50,21 +52,17 @@ export default function Contact() {
             email: input.email,
             phone: input.phone
         }
-        // const response =   await fetch('/api/Admins/contact', {
-        //         method: 'POST',
-        //         headers: {
-        //             'Content-Type': 'application/json'
-        //         }, 
-        //         body: JSON.stringify(data)
-        //     })
-        // if (!response.ok) {
-        //     throw new Error("Network response was not ok");
-        // }
-        // const res = await response.json()
-        // console.log('worked.....................')
-        // return res;\
+    
         axios.post(`https://first-kingtech-deploy.vercel.app/api/Admins/contact`, data)
-            .then(() => console.log('worked')).catch((err) => console.log(err))
+            .then(() => {
+                notyf.success('Thank you for your contact request. Our representatives will respond to you soon')
+                console.log('worked')
+            }
+        ).catch((err) => {
+            notyf.error('Network issues')
+            console.log(err)
+        }
+        )
     }
     return (
         <section id="contact" className=" bg-black px-5 py-7 md:px-14 md:py-14">
