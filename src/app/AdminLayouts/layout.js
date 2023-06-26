@@ -2,7 +2,6 @@ import "./globals.css";
 import { Inter } from "next/font/google";
 import Head from "next/head";
 import Navbar from './Student/Layout/Navabr'
-import supportsColor from "supports-color"
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Kingship Technologies",
