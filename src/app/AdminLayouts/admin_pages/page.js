@@ -4,7 +4,7 @@ import Main from '../Admin/Main'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation';
 const page = () => {
-  const router = useRouter()
+  // const router = useRouter()
   // const email = localStorage.getItem('email');
   // const password = localStorage.getItem('password')
 
@@ -12,12 +12,7 @@ const page = () => {
   //   email: email,
   //   password:password
   // })
-  useEffect(() => {
-    if (!localStorage.getItem('email') && localStorage.getItem('password')) {
-        router.push('/AdminLayouts/login')
-    }
-  }, [])
-
+ 
 
 
 
