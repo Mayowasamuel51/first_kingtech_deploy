@@ -15,6 +15,7 @@
     "axios": "^1.4.0",
     "bcrypt": "^5.1.0",
     "framer-motion": "^10.12.16",
+    "install": "^0.13.0",
     "mongodb": "^5.6.0",
     "mongoose": "^7.3.1",
     "next": "13.4.4",
