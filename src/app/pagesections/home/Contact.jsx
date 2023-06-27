@@ -63,7 +63,7 @@ function Contact() {
             phone: input.phone
         }
 
-        axios.post(`http://localhost:3000/api/Admins/contact`, data)
+        axios.post(`https://first-kingtech-deploy.vercel.app/api/Admins/contact`, data)
             .then((res) => {
                 if (res.status.data === 404) {
                     alert('missing feild')

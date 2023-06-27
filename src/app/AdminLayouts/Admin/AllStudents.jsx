@@ -1,7 +1,7 @@
 import React, { Suspense } from "react";
 import FormContact from "../components/FormContact";
 async function fetchContact() {
-  const response = await fetch('http://localhost:3000/api/Admins/contact', {
+  const response = await fetch('https://first-kingtech-deploy.vercel.app/api/Admins/contact', {
 
   })
   const data = await response.json()
