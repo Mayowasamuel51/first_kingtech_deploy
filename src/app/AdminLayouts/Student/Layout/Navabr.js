@@ -28,20 +28,22 @@ const Navabr = () => {
           </Link>
           {/* <Searchbar /> */}
           <div className="w-full md:flex gap-10 items-center justify-center hidden">
-            <Link href="/" className="text-base">
+            {/* <Link href="/" className="text-base">
               Courses
+            </Link> */}
+
+            <Link href="/" className="text-base">
+                  Make  A Review 
             </Link>
 
             <Link href="/" className="text-base">
-              Apply Form
-            </Link>
-
-
-            <Link href="/" className="text-base">
-              Mentorship
+                Our Rules 
             </Link>
             <Link href="/" className="text-base">
-              Live Courses
+            Announcement
+            </Link>
+            <Link href="/" className="text-base">
+              Ask A Question 
             </Link>
             <Link href="/" className="text-base">
               Timetable

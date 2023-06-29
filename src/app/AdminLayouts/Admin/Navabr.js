@@ -13,8 +13,8 @@ const Navabr = () => {
 
   return (
     <>
-      <header className="w-full relative bg-slate-50 p-5 shadow-md">
-        <div className="flex flex-1 justify-between items-baseline align-middle mx-auto">
+      <header className="w-full relative bg-slate-50 p-2 shadow-md">
+        <div className="pb-3 flex flex-1 justify-between items-baseline align-middle mx-auto">
           <Link className="mx-4 relative top-5" href="">
             <Image
               src={logo}
@@ -24,17 +24,27 @@ const Navabr = () => {
               height={50}
             />
           </Link>
+
           {/* <Searchbar /> */}
           <div className="w-full md:flex gap-10 items-center justify-center hidden">
-            <Link href="/" className="text-base">
-              Register Students
+            <Link href="AdminLayouts/admin_pages" className="text-base">
+              Form Contacts
             </Link>
-            <Link href="/admin_pages" className="text-base">
-            Form Contacts
+            <Link href="admin_pages/register" className="text-base">
+              Registered Students
             </Link>
-            <Link href="/admin_pages/broadcast" className="text-base">
+
+            <Link href="AdminLayouts/admin_pages/broadcast" className="text-base">
               Broadcast Messsage
             </Link>
+
+            <Link href="AdminLayouts/admin_pages/register" className="text-base">
+              Veiw Comments
+            </Link>
+            <Link href="AdminLayouts/admin_pages/register" className="text-base">
+              Veiw Questions
+            </Link>
+
           </div>
           {/* <Notification notif={notif} /> */}
           <div className="mx-2 float-right relative cursor-pointer">

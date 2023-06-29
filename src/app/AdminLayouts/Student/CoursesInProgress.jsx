@@ -1,17 +1,31 @@
 'use client'
-
-import React from 'react'
+import React, { useEffect } from 'react'
 import Image from 'next/image'
 import { courseInProgress } from '../store'
-import RangeSlider from 'react-range-slider-input';
+// import RangeSlider from 'react-range-slider-input';
 import 'react-range-slider-input/dist/style.css';
-
-
+import { useSession } from 'next-auth/react';
+import { signOut } from "next-auth/react";
+import Home from '../page';
+import { useRouter } from 'next/navigation';
 const CoursesInProgress = () => {
+  const router = useRouter()
+  const { data: session } = useSession({
+    required:true
+  })
+  console.log(session)
+  // if (!session) {
+  //   return <  Home />;
+  // }
   return (
     <div className='container-fluid mx-auto p-5 mt-10 w-full'>
+
       <div className="mt-3">
-        <h1 className="text-xl text-orange-500 mx-5 capitalize">in progress</h1>
+        {/* <h1 className="text-xl text-orange-500 mx-5 capitalize">{session?.user?.email}</h1> */}
+
+        <button onClick={()=>signOut({callbackUrl:'http://localhost:3000'})}  className="text-[12px]">
+                Logout
+              </button>
       </div>
 
       <section className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-1 justify-center items-center align-middle p-4 overflow-auto max-w-full mx-auto relative top-[3.54em] gap-[2.34rem]">

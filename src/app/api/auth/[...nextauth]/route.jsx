@@ -13,6 +13,7 @@ export const authOptions = {
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET ,
         }),
+
         CredentialsProvider({
             name: "credentials",
             credentials: {
@@ -33,15 +34,14 @@ export const authOptions = {
                 });
                 // if no user was found 
                 if (!user || !user?.hashedPassword) {
-                    throw new Error('No user found')
+                    throw new Error('Email not found')
                 }
                 // check to see if password matches
                 const passwordMatch = await bcrypt.compare(credentials.password, user.hashedPassword)
                 // if password does not match
                 if (!passwordMatch) {
-                    throw new Error('Incorrect password')
+                    throw new Error('Incorrect password or Email ')
                 }
-
                 return user;
             },
         }),  
@@ -49,6 +49,13 @@ export const authOptions = {
     secret: process.env.SECRET,
     session: {
         strategy: "jwt",
+    },
+    pages: {
+        signIn: 'https://first-kingtech-deploy.vercel.app/signin',
+        signOut: 'https://first-kingtech-deploy.vercel.app',
+        // error: '/auth/error', // Error code passed in query string as ?error=
+        // verifyRequest: '/auth/verify-request', // (used for check email message)
+        // newUser: '/auth/new-user' // New users will b  
     },
     debug: process.env.NODE_ENV === "development",
 }

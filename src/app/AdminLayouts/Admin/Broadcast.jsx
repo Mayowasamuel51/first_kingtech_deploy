@@ -1,10 +1,11 @@
 import React from "react";
 import Navabr from "./Navabr";
+import Admi_Layout from "./Admi_Layout";
 
 const Broadcast = () => {
   return (
     <>
-     <Navabr/>
+     {/* <Navabr/> */}
       <div className="w-full relative top-[4em] p-8 mb-10">
         <h2 className="text-2xl text-orange-500 px-8">Broadcast a Message</h2>
       </div>
@@ -36,4 +37,4 @@ const Broadcast = () => {
   );
 };
 
-export default Broadcast;
+export default Admi_Layout(Broadcast);

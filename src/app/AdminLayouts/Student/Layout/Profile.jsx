@@ -1,10 +1,11 @@
-import React, { useState, useEffect} from "react";
+'use client'
+import React, { useState, useEffect } from "react";
 import profile from "../../../assets/person_1.jpg";
 import Link from "next/link";
 import Image from "next/image";
 import { useRef, useCallback } from "react";
 import { FaSearch } from "react-icons/fa";
-
+import { signOut } from "next-auth/react";
 
 const Profile = () => {
   const [show, setShow] = useState(false);
@@ -133,9 +134,9 @@ const Profile = () => {
         <div className="mt-3">
           <ul className="list-none leading-10">
             <li className="hover:bg-slate-200 hover:px-2 transition">
-              <Link href={"/"} className="text-[12px]">
+              <button onClick={()=>signOut({callbackUrl:'http://localhost:3000'})} className="text-[12px]">
                 Logout
-              </Link>
+              </button>
             </li>
           </ul>
         </div>

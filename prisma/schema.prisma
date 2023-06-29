@@ -1,5 +1,3 @@
-
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -15,18 +13,21 @@ model contactus {
   phone     Int
   email     String
   message   String
-  createdAt   DateTime @default(now())
+  createdAt DateTime @default(now())
 }
 
 model Register {
-  id          String   @id @default(auto()) @map("_id") @db.ObjectId
-  username    String?  @unique
-  email       String?  @unique
-  password    String?
-  comments    String?
-  AskQuestion String?
-  createdAt   DateTime @default(now())
-  updateAt    DateTime @updatedAt
+  id             String   @id @default(auto()) @map("_id") @db.ObjectId
+  username       String?  @unique
+  email          String?  @unique
+  hashedPassword String?
+  Cyberprice     Int?
+  Mentorprice    Int?
+  Securityprice  Int?
+  comments       String?
+  AskQuestion    String?
+  createdAt      DateTime @default(now())
+  updateAt       DateTime @updatedAt
 }
 
 model broadcast {

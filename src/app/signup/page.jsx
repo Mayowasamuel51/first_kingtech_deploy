@@ -30,11 +30,11 @@ const Signup = () => {
         const data = {
             username: input.username,
             email: input.email,
-            password: input.password
+            hashPassword: input.password
         }
-        axios.post(`http://localhost:3000/api/register`, data)
+        axios.post(`https://first-kingtech-deploy.vercel.app/api/register`, data)
             .then(() => {
-                router.push('http://localhost:3000/signin')
+                router.push('https://first-kingtech-deploy.vercel.app/signin')
                 console.log('worked......')
             })
             .catch((err) => {
@@ -81,15 +81,18 @@ const Signup = () => {
                                 </Link>
                             </label>
                         </div>
+                        <div className='text-center'>
+                        <ToastContainer/>
+                     </div>
                         <button type='submit' className=' bg-orange-500 py-2 rounded-lg text-white font-medium w-full lg:hover:bg-opacity-90'>
                             Continue
                         </button>
                         <span>OR</span>
-                        <button className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                       
+                    </form>
+                    <button onClick={() => signIn('google')} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
                             Sign up with Google
                         </button>
-                    </form>
-
                     <p className=' text-sm text-gray-500 text-center lg:text-base'>
                         Already have an account? <Link href="signin" className=' text-orange-500'>Sign In</Link>
                     </p>

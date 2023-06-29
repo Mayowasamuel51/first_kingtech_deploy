@@ -1,5 +1,7 @@
 import React from 'react'
 import Broadcast from '../../Admin/Broadcast'
+import Navabr from '../../Admin/Navabr'
+import Admi_Layout from '../../Admin/Admi_Layout'
 const page = () => {
   return (
     <div>
@@ -8,4 +10,4 @@ const page = () => {
   )
 }
 
-export default page
+export default   page
