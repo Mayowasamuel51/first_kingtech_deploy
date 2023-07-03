@@ -16,18 +16,39 @@ model contactus {
   createdAt DateTime @default(now())
 }
 
-model Register {
-  id             String   @id @default(auto()) @map("_id") @db.ObjectId
-  username       String?  @unique
-  email          String?  @unique
+model User {
+  id             String    @id @default(auto()) @map("_id") @db.ObjectId
+  name           String?
+  email          String?   @unique
+  emailVerified  DateTime?
+  image          String?
   hashedPassword String?
   Cyberprice     Int?
   Mentorprice    Int?
   Securityprice  Int?
   comments       String?
   AskQuestion    String?
-  createdAt      DateTime @default(now())
-  updateAt       DateTime @updatedAt
+  createdAt      DateTime  @default(now())
+  updateAt       DateTime  @updatedAt
+  accounts       Account[]
+}
+
+model Account {
+  id                String  @id @default(auto()) @map("_id") @db.ObjectId
+  userId            String  @db.ObjectId
+  type              String
+  provider          String
+  providerAccountId String
+  refresh_token     String? @db.String
+  access_token      String? @db.String
+  expires_at        Int?
+  token_type        String?
+  scope             String?
+  id_token          String? @db.String
+  session_state     String?
+  user              User    @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([provider, providerAccountId])
 }
 
 model broadcast {

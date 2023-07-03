@@ -5,41 +5,64 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { UserIcon, EnvelopeIcon, LockClosedIcon } from '@heroicons/react/24/solid'
 import axios from "axios"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import signup from '../../../public/images/signup.png'
 import SectionWrapper from '../components/SectionWrapper'
-import { useRouter } from 'next/navigation';
+import { redirect, useRouter } from 'next/navigation';
+import { signIn, getProviders, useSession } from 'next-auth/react';
+import Provider from '../SessionProvider';
+import NextAuth from 'next-auth/next';
 const Signup = () => {
+    const session = useSession()
     const router = useRouter()
     const notify = () => toast.error("Error refresh your page !", {
         position: toast.POSITION.TOP_LEFT
     });
-    const good= () => toast.success(" Our representatives will respond to you soon !", {
-        position: toast.POSITION.TOP_LEFT
-      });
     const [input, setInput] = useState({
-        username: '',
-        password: '',
+        name: '',
+        hashPassword: '',
         email: '',
     })
     const inputHandle = (e) => {
         setInput({ ...input, [e.target.name]: e.target.value })
     }
+    useEffect(() => {
+        if (session?.status === 'authenticated') {
+            router.push('http://localhost:3000/AdminLayouts')
+        }
+    })
+    const handleSignIn = () => {
+        signIn('google',{callbackUrl:'http://localhost:3000/AdminLayouts'}); 
+    };
     const signupSubmit = async (e) => {
         e.preventDefault();
         const data = {
-            username: input.username,
+            name: input.name,
             email: input.email,
-            hashPassword: input.password
+            hashPassword: input.hashPassword
         }
-        axios.post(`https://first-kingtech-deploy.vercel.app/api/register`, data)
-            .then(() => {
-                router.push('https://first-kingtech-deploy.vercel.app/signin')
-                console.log('worked......')
+        // axios.post(`/api/register`, data)
+        //     .then(() => {
+        //         router.push('http://localhost:3000/signin')
+        //         console.log('worked......')
+        //     })
+        //     .catch((err) => {
+        //         notify()
+        //         alert(err)
+        //     })
+        axios.post(`/api/register`, data)
+            .then((res) => {
+                if (res.data.status === 404) {
+                    toast.error('This email has been registered')
+                } else {
+                    router.push('http://localhost:3000/signin')
+                    console.log('worked......')
+                    toast.success('proceeding to  signin page ')
+                }
             })
             .catch((err) => {
                 notify()
-                console.log(err)
+                alert(err)
             })
     }
     return (
@@ -59,7 +82,7 @@ const Signup = () => {
                     >
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <UserIcon width={25} className=' text-gray-500' />
-                            <input type="text" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter full name' onChange={inputHandle} value={input.username} name='username' />
+                            <input type="text" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter full name' onChange={inputHandle} value={input.name} name='name' />
                         </div>
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <EnvelopeIcon width={25} className=' text-gray-500' />
@@ -67,7 +90,7 @@ const Signup = () => {
                         </div>
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <LockClosedIcon width={25} className=' text-gray-500' />
-                            <input type="password" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password' onChange={inputHandle} value={input.password} name='password' />
+                            <input type="password" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password' onChange={inputHandle} value={input.hashPassword} name='hashPassword' />
                         </div>
                         <div className=' flex items-center gap-x-5 place-self-start'>
                             <input type="checkbox" className=' form-checkbox' name='checkbox' required />
@@ -82,17 +105,33 @@ const Signup = () => {
                             </label>
                         </div>
                         <div className='text-center'>
-                        <ToastContainer/>
-                     </div>
+                            <ToastContainer />
+                        </div>
                         <button type='submit' className=' bg-orange-500 py-2 rounded-lg text-white font-medium w-full lg:hover:bg-opacity-90'>
                             Continue
                         </button>
                         <span>OR</span>
-                       
+
                     </form>
-                    <button onClick={() => signIn('google')} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
-                            Sign up with Google
-                        </button>
+                    {/* {providers &&
+                        Object.values(providers).map((provider) => (
+                            <button
+                                type='button'
+                                key={provider.name}
+                                onClick={() => {
+                                    signIn(provider.id);
+                                }}
+                                className='black_btn'
+                            >
+                                Sign inss
+                            </button>
+                        ))} */}
+                    {/* <button onClick={handleSignIn} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                        Sign up with Google
+                    </button> */}
+                    <button onClick={handleSignIn} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                        Sign in with Google
+                    </button>
                     <p className=' text-sm text-gray-500 text-center lg:text-base'>
                         Already have an account? <Link href="signin" className=' text-orange-500'>Sign In</Link>
                     </p>
@@ -102,4 +141,23 @@ const Signup = () => {
     );
 }
 
-export default SectionWrapper( Signup);
+export default SectionWrapper(Signup);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// https://youtu.be/FGqbAx0U7z0

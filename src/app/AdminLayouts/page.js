@@ -10,18 +10,18 @@ import { redirect, useRouter } from 'next/navigation';
 export default function Home() {
   const { data: session } = useSession({
     required: true,
-    onUnauthenticated(){
-      redirect('https://first-kingtech-deploy.vercel.app/signin?callbackUrl=/AdminLayouts')
+    onUnauthenticated() {
+      redirect('http://localhost:3000/signin?callbackUrl=/AdminLayouts')
     } // to redirect back if user not auth well 
   })
   console.log(session)
-  
+
   return (
-    <>
-      <Navabr  />
-      <Hero name={session?.user?.email}  />
+    <div style={{ marginBottom: '12rem' }}>
+      <Navabr />
+      <Hero name={session?.user?.name} />
       <CoursesInProgress />
       {/* <CoursesScroll/> */}
-    </>
+    </div>
   );
 }

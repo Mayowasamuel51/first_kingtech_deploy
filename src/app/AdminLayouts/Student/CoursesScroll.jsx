@@ -4,7 +4,7 @@ import Image from "next/image";
 import { courses } from "../store";
 import { FaStar } from "react-icons/fa";
 import Link from "next/link";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
+// import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 
 const CoursesScroll = () => {

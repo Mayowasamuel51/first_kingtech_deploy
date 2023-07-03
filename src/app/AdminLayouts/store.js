@@ -68,4 +68,13 @@ export const courseInProgress = [
         rate: 4.5,
         range: 0
     },
+
+
+    {
+        id: 2,
+        course: 'Business Continuity (BC), Disaster Recovery (DR) & Inciden Response Concepts',
+        img: access,
+        rate: 4.5,
+        range: 0
+    },
 ]

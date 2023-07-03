@@ -5,7 +5,7 @@ const Hero = (props) => {
   return (
     <div className="container-fluid sm:mx-auto bg-black text-white md:p-3 p-1 flex flex-auto sm:justify-between sm:items-baseline sm:flex-row flex-col justify-center items-center sm:gap-0 gap-5">
       <div className="mt-10 sm:text-start text-center border-red-500">
-        <h1 className="text-sm md:text-[2.12rem] text-2xl text-orange-500 px-6">
+        <h1 className="font-bold text-sm sm:text-[2.12rem] text-2xl text-orange-500 px-6">
           Welcome        Back 
           <span> {props.name}</span>
         

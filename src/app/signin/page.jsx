@@ -13,31 +13,34 @@ import { useRouter } from "next/navigation"
 const Signin = () => {
     const session = useSession()
     const router = useRouter()
+    useEffect(() => {
+        if (session?.status === 'authenticated') {
+            router.push('http://localhost:3000/AdminLayouts')
+        }
+    })
     const [data, setData] = useState({
         email: '',
         password: ''
     })
-    useEffect(() => {
-        if (session?.status === 'authenticated') {
-            router.push('https://first-kingtech-deploy.vercel.app/AdminLayouts')
-        }
-    })
+  
+    const handleSignIn = () => {
+        signIn('google',{callbackUrl:'http://localhost:3000/AdminLayouts'}); // Initiates the Google login flow
+      };
     const loginUser = async (e) => {
         e.preventDefault()
-        signIn('credentials',
-            {
+        signIn('credentials',{
                 ...data, redirect: false
             })
             .then((callback) => {
                 if (callback?.error) {
                     toast.error(callback.error)
-                    // toast.error('ema')
                 }
                 if (callback?.ok && !callback?.error) {
                     toast.success('Logged in successfully!')
                 }
             })
     }
+   
     return (
         <section className=' bg-orange-50 min-h-screen flex flex-col justify-center items-center px-5 pt-28 md:px-14'>
             <div className=' grid grid-cols-1 gap-y-5 lg:grid-cols-2 lg:gap-x-5 lg:items-center lg:max-w-screen-lg lg:mx-auto'>
@@ -64,6 +67,7 @@ const Signin = () => {
                         <div className="text-center">
                             <ToastContainer />
                         </div>
+
                         <button type='submit' className=' bg-orange-500 py-2 rounded-lg text-white font-medium mt-10 w-full lg:hover:bg-opacity-90'>
                             Login
                         </button>
@@ -72,7 +76,7 @@ const Signin = () => {
                             Sign in with Google
                         </button> */}
                     </form>
-                    <button onClick={() => signIn('google')} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
+                    <button onClick={handleSignIn} className=' bg-transparent border-solid border-2 border-black py-2 rounded-lg text-black font-medium w-full duration-200 ease-in-out lg:hover:bg-black lg:hover:text-white'>
                         Sign in with Google
                     </button>
 

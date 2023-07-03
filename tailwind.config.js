@@ -1,5 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
+  rules: [
+    {
+      test: /\.css$/,
+      use: ['css-loader'],
+    },
+  ],
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
     './src/components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -17,4 +23,5 @@ module.exports = {
   plugins: [
     require('@tailwindcss/forms'),
   ],
+  // plugins: ['tailwindcss', 'autoprefixer'],
 }

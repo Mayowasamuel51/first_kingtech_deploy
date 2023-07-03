@@ -1,12 +1,10 @@
 'use client'
-
 import { PhoneIcon, EnvelopeIcon, MapPinIcon } from "@heroicons/react/24/solid"
 import axios from "axios"
 import React, { useState } from "react"
 import { FaWhatsapp } from "react-icons/fa"
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-
 import Head from "next/head"
 import SectionWrapper from "@/app/components/SectionWrapper"
 function Contact() {

@@ -4,30 +4,30 @@ import prisma from '../../libs/prismadb.jsx'
 import bcrypt from 'bcrypt'
 
 export async function POST(req) {
-    const { username, email, hashPassword, price, AskQuestion, comments } = await req.json();
-    if (!username || !email || !hashPassword) {
+    const { name, email, hashPassword, price, AskQuestion, comments } = await req.json();
+    if (!name || !email || !hashPassword) {
         return NextResponse.json({ data: 'missing input fields', status: 404 })
     }
-    const register_exist = await prisma.Register.findUnique({
+    const register_exist = await prisma.User.findUnique({
         where: {
-            email
+            email:email
         }
     });
     if (register_exist) {
-        return NextResponse.json({ data: 'This email has been registered' })
+        return NextResponse.json({ data: 'This email has been registered', status:404 })
     }
     const hashPasswor = await bcrypt.hash(hashPassword, 10);
-    const register = await prisma.Register.create({
+    const register = await prisma.User.create({
         data: {
-            username: username,
+            name: name,
             email: email,
-            price: price,
+            
             hashedPassword: hashPasswor,
             AskQuestion: AskQuestion,
             comments: comments
         }
     })
-    console.log(username, email, hashPassword)
+    console.log(name, email, hashPassword)
     return NextResponse.json({ data: 'data created', status: 200, data: register })
 }
 
