@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import React, { useState } from "react";
 import logo from "../../../assets/logo-two.jpeg";
 import Link from "next/link";
@@ -17,13 +17,13 @@ const Navabr = () => {
     <>
       <header className="w-full relative bg-slate-50 p-3 shadow-md">
         <div className="flex flex-1 justify-between items-baseline align-middle mx-auto">
-          <Link className="mx-4 relative top-5" href='AdminLayouts'>
+          <Link className="mx-4 relative top-5" href="AdminLayouts">
             <Image
               src={logo}
               alt=""
-              className="relative top-0 md:w-[80px] md:h-[60px] w-[60px] h-[60px] rounded-full"
-              width={50}
-              height={50}
+              className="relative top-0 md:w-[80px] md:h-[60px] w-[60px] h-[60px] rounded-full "
+              width={500}
+              height={500}
             />
           </Link>
           {/* <Searchbar /> */}
