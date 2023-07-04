@@ -15,7 +15,7 @@ const Navabr = () => {
 
   return (
     <>
-      <header className="w-full relative bg-slate-50 p-3 shadow-md">
+      <header className="w-full relative bg-slate-50 p-1 shadow-md">
         <div className="flex flex-1 justify-between items-baseline align-middle mx-auto">
           <Link className="mx-4 relative top-5" href="AdminLayouts">
             <Image
@@ -42,7 +42,7 @@ const Navabr = () => {
             <Link href="/" className="text-base">
               Announcement
             </Link>
-            <Link href="AdminLayouts/question" className="text-base">
+            <Link href="dashboard/question" className="text-base">
               Ask A Question
             </Link>
             <Link href="#" className="text-base">

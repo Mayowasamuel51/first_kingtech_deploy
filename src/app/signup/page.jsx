@@ -28,11 +28,11 @@ const Signup = () => {
     }
     useEffect(() => {
         if (session?.status === 'authenticated') {
-            router.push('http://localhost:3000/AdminLayouts')
+            router.push('http://localhost:3000/dashboard')
         }
     })
     const handleSignIn = () => {
-        signIn('google',{callbackUrl:'http://localhost:3000/AdminLayouts'}); 
+        signIn('google',{callbackUrl:'http://localhost:3000/dashboard'}); 
     };
     const signupSubmit = async (e) => {
         e.preventDefault();

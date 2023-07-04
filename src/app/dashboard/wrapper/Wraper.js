@@ -10,7 +10,7 @@ function SectionWrapper(Component) {
     const { data: session } = useSession({
         required: true,
         onUnauthenticated() {
-            redirect('http://localhost:3000/signin?callbackUrl=/AdminLayouts')
+            redirect('http://localhost:3000/signin?callbackUrl=/dashboard')
         } 
     })
     console.log(session)
