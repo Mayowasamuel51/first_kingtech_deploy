@@ -11,7 +11,9 @@ import {
 } from "react-square-web-payments-sdk";
 import Footer from './components/Footer'
 import Header from './components/Header'
+import ErrorBoundary from './ErrorBoundary';
 import Provider from './SessionProvider';
+import Error from './error';
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Kingship Technologies',
@@ -22,13 +24,15 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      
+
       <body
         className={inter.className}
       >
         {/* <Header /> */}
         <Provider>
+          <ErrorBoundary fallback={<Error/>}>
             {children}
+          </ErrorBoundary>
         </Provider>
         {/* <Footer /> */}
       </body>

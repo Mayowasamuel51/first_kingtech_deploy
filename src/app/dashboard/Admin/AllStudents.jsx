@@ -1,14 +1,39 @@
 import React, { Suspense } from "react";
 import FormContact from "../components/FormContact";
+import ErrorBoundary from "@/app/ErrorBoundary";
+import Error from "../error";
+import NetworkError from "@/app/NetworkError";
 async function fetchContact() {
   const response = await fetch('https://first-kingtech-deploy.vercel.app/api/Admins/contact', {
     cache:'no-store'
   })
   // const response = await fetch('http://localhost:3000/api/Admins/contact', {
-  //   cache:'no-store'
+  //   cache: 'no-store'
   // })
-  const data = await response.json()
-  return data.data
+
+  try {
+    if (!response.ok) {
+      if (response.status === 404) {
+        return <NetworkError />
+        // throw new Error('Resource not found');
+      } else if (response.status === 500) {
+        return <NetworkError />
+        // throw new Error('Internal server error');
+      } else {
+        return <NetworkError />
+        // throw new Error('Unknown server error');
+      }
+    }
+    const data = await response.json()
+    return data.data
+  } catch (err) {
+    return <NetworkError />
+  }
+
+
+
+  // const data = await response.json()
+  // return data.data
 }
 
 const AllStudents = async () => {
@@ -21,9 +46,11 @@ const AllStudents = async () => {
           <h2 className="text-2xl text-orange-500 px-8">From Contact Form</h2>
         </div>
         <div className="mt-3">
-          <Suspense fallback={<h1 className="text-3xl font-semibold text-center">LOADING.....</h1>}>
-            <FormContact contact={contactForm} />
-          </Suspense>
+          <ErrorBoundary fallback={<Error />}>
+            <Suspense fallback={<h1 className="text-3xl font-semibold text-center">LOADING.....</h1>}>
+              <FormContact contact={contactForm} />
+            </Suspense>
+          </ErrorBoundary>
         </div>
       </div>
     </>

@@ -1,29 +1,29 @@
 'use client'
 import { useState } from 'react';
 function FormContact({ contact }) {
-    const [currentpage, setCurrentpage] = useState(4)
-    const recordPerpage = 30;
-    const lastindex = currentpage * recordPerpage;
-    const firstindex = lastindex - recordPerpage;
-    const records = contact.slice(firstindex, lastindex)
-    const npage = Math.ceil(contact.length / recordPerpage);
-    const number = [...Array(npage + 1).keys()].slice(1)
+    // const [currentpage, setCurrentpage] = useState(4)
+    // const recordPerpage = 30;
+    // const lastindex = currentpage * recordPerpage;
+    // const firstindex = lastindex - recordPerpage;
+    // const records = contact.slice(firstindex, lastindex)
+    // const npage = Math.ceil(contact.length / recordPerpage);
+    // const number = [...Array(npage + 1).keys()].slice(1)
 
-    function nextPage() {
-        if (currentpage !== lastindex) {
-            setCurrentpage(currentpage + 1)
-        }
-    }
+    // function nextPage() {
+    //     if (currentpage !== lastindex) {
+    //         setCurrentpage(currentpage + 1)
+    //     }
+    // }
 
-    function prePage() {
-        if (currentpage !== 1) {
-            setCurrentpage(currentpage - 1)
-        }
-    }
+    // function prePage() {
+    //     if (currentpage !== 1) {
+    //         setCurrentpage(currentpage - 1)
+    //     }
+    // }
 
-    function changecpage(id) {
-        setCurrentpage(id)
-    }
+    // function changecpage(id) {
+    //     setCurrentpage(id)
+    // }
     return (
         <>
             <div className="mt-10 max-w-full p-10">

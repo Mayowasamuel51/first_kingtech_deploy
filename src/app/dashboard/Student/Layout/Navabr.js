@@ -36,15 +36,18 @@ const Navabr = () => {
             <Link href="/dashboard" className="text-base">
               Home
             </Link>
-
-            <Link href="/" className="text-base">
+  
+            <Link href="/dashboard/rules" className="text-base">
               Our Rules
+            </Link>
+            <Link href="dashboard/settings" className="text-base">
+              Settings
             </Link>
             <Link href="/" className="text-base">
               Announcement
             </Link>
             <Link href="dashboard/question" className="text-base">
-              Ask A Question
+             Comment
             </Link>
             <Link href="#" className="text-base">
               Timetable

@@ -6,7 +6,6 @@ export async function GET() {
     orderBy: {id: 'desc'} 
     }) // this code will get the lastest 
     return NextResponse.json({ data: data, status: 200 })
-
 }
 export async function POST(req) {
     const { name, phone, email, message } = await req.json();
