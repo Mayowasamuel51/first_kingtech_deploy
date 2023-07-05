@@ -5,7 +5,7 @@ import Navabr from "../Student/Layout/Navabr";
 import { useSession } from "next-auth/react";
 import { redirect } from "next/navigation";
 
-const SectionWrapper = (Component) =>
+const Wrapper = (Component) =>
   function Wrap() {
     const { data: session } = useSession({
       required: true,
@@ -17,10 +17,10 @@ const SectionWrapper = (Component) =>
     return (
       <>
         <Navabr />
-        <Hero name={session?.user?.name} />
+
         <Component />
       </>
     );
   };
 
-export default SectionWrapper;
+export default Wrapper;
