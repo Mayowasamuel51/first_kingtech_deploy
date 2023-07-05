@@ -1,5 +1,6 @@
 "use client";
 import SectionWrapper from "../wrapper/Wraper";
+<<<<<<< HEAD
 import Hero from "../Student/Hero";
 import Navabr from "../Student/Layout/Navabr";
 import { useSession } from 'next-auth/react';
@@ -9,6 +10,12 @@ function Rules() {
   return (
     <>
     
+=======
+
+const Rules = () => {
+  return (
+    <>
+>>>>>>> b684650a572364f384ea1d8d0f8301a87da0e49e
       <section className=" p-8">
         {/* NDA */}
         <div className=" my-10">
@@ -137,4 +144,8 @@ function Rules() {
   );
 };
 
+<<<<<<< HEAD
 export default  SectionWrapper(Rules);
+=======
+export default SectionWrapper(Rules);
+>>>>>>> b684650a572364f384ea1d8d0f8301a87da0e49e
