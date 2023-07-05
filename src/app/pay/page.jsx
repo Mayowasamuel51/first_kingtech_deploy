@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import styles from "../styles/Home.module.css";
 import {
   ApplePay,
@@ -6,7 +6,7 @@ import {
   CreditCard,
   PaymentForm,
 } from "react-square-web-payments-sdk";
- function Home() {
+function Home() {
   return (
     <div className={styles.container}>
       <PaymentForm
@@ -22,6 +22,7 @@ import {
             }),
           });
           console.log(await response.json());
+          // alert(JSON.stringify(await response.json(), null, 2));
         }}
         createPaymentRequest={() => ({
           countryCode: "US",

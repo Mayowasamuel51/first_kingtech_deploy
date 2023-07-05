@@ -7,11 +7,10 @@ import Image from "next/image";
 import { useRef, useCallback } from "react";
 import { FaSearch } from "react-icons/fa";
 import { signOut, useSession } from "next-auth/react";
-import { redirect, useRouter } from 'next/navigation';;
+import { redirect, useRouter } from "next/navigation";
 
 const Profile = () => {
- 
-  const { data: session } = useSession()
+  const { data: session } = useSession();
   const [show, setShow] = useState(false);
   const handleMenu = () => {
     setShow((prev) => !prev);
@@ -36,17 +35,21 @@ const Profile = () => {
   return (
     <>
       <div
-        className={`px-2 inline-block relative top-3 cursor-pointer`}
+        className={`px-2 inline-block relative cursor-pointer`}
         onClick={handleMenu}
         ref={ref}
       >
-        <Image
-          src={<UserCircleIcon className="w-10 h-10"/>}
-          alt={session?.user?.name}
-          width={500}
-          height={500}
-          className="rounded-full md:w-[100px] md:h-[50px] w-[80px] h-[80px] "
-        />
+        {session?.user?.image ? (
+          <Image
+            src={session?.user?.image}
+            alt={session?.user?.name}
+            width={500}
+            height={500}
+            className="rounded-full md:w-[100px] md:h-[50px] w-[80px] h-[80px] "
+          />
+        ) : (
+          <UserCircleIcon className="md:w-[100px] md:h-[50px] w-[80px] h-[80px]" />
+        )}
       </div>
 
       {/* Profile dropdown */}
@@ -63,15 +66,21 @@ const Profile = () => {
         }}
       >
         <div className="flex flex-1 justify-center  align-baseline gap-5 items-center mb-4 p-2">
-          <Image
-             src={session?.user?.image  || <UserCircleIcon className="w-10 h-10" /> }
-            alt={session?.user?.name}
-            className="rounded-full relative w-[60px] h-[60px]"
-            width={80}
-            height={80}
-          />
+          {session?.user?.image ? (
+            <Image
+              src={session?.user?.image}
+              alt={session?.user?.name}
+              className="rounded-full relative w-[60px] h-[60px]"
+              width={80}
+              height={80}
+            />
+          ) : (
+            <UserCircleIcon className="w-20 h-20" />
+          )}
           <Link className="flex flex-col leading-6 items-center" href="/">
-            <span className="text-[15px] font-medium">{session?.user?.name}</span>
+            <span className="text-[15px] font-medium">
+              {session?.user?.name}
+            </span>
             <small className="text-[10px]">{session?.user?.email}</small>
           </Link>
         </div>
@@ -101,7 +110,7 @@ const Profile = () => {
             </li>
             <li className="hover:bg-slate-200 hover:px-2 transition">
               <Link href="/" className="text-[12px]">
-                Timetable 
+                Timetable
               </Link>
             </li>
             <li className="hover:bg-slate-200 hover:px-2 transition">
