@@ -1,3 +1,4 @@
+"use client"
 import Experts from "../components/Experts";
 import SectionWrapper from "../components/SectionWrapper";
 import Banner from "../pagesections/cybersecurity/Banner";

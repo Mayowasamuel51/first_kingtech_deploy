@@ -36,11 +36,8 @@ const Navabr = () => {
             <Link href="/dashboard" className="text-base">
               Home
             </Link>
-<<<<<<< HEAD
   
-=======
 
->>>>>>> b684650a572364f384ea1d8d0f8301a87da0e49e
             <Link href="/dashboard/rules" className="text-base">
               Our Rules
             </Link>
