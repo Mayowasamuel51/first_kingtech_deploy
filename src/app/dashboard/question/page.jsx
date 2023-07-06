@@ -8,7 +8,8 @@ function AskQ() {
     const { data: session } = useSession({
         required: true,
         onUnauthenticated() {
-            redirect('http://localhost:3000/signin?callbackUrl=/dashboard')
+            // redirect('http://localhost:3000/signin?callbackUrl=/dashboard')
+            redirect('https://first-kingtech-deploy.vercel.app/signin?callbackUrl=/dashboard')
         }
     })
     console.log(session)
