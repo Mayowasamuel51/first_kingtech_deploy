@@ -55,7 +55,7 @@ const CoursesInProgress = () => {
                 {/* <input type="range" name="" id="" value="12" className="bg-slate-300 w-full" /> */}
                 <div className="md:flex md:flex-row md:items-center md:gap-x-5 text-center">
                   <Link
-                    href={`#`}
+                    href={`/dashboard`}
                     className=" border-2 bg-orange-500 border-orange-500 rounded px-4 py-2 text-white text-sm hover:bg-black hover:border-black hover:shadow-md"
                   >
                     Get Course
