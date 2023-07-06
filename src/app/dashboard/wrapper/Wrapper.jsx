@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React  ,{ Suspense }  from "react";
 import Hero from "../Student/Hero";
 import Navabr from "../Student/Layout/Navabr";
 import { useSession } from "next-auth/react";
