@@ -38,15 +38,20 @@ const Outline = () => {
             <span>$2,000</span>
           </span>
         </div>
+        <Link href="register" className=" z-20">
+          <button className=" bg-transparent border-2 border-white py-2 px-8 rounded-lg uppercase text-white tracking-widest duration-300 ease-in-out hover:font-semibold hover:border-orange-500 hover:text-orange-500">
+            register
+          </button>
+        </Link>
       </div>
-      <div
+      {/* <div
         onClick={() => window.open("https://square.link/u/F1M4H5e0", "_blank")}
         className=" z-20 flex justify-center items-center"
       >
         <button className=" bg-transparent border-2 border-black py-2 px-8 rounded-lg uppercase text-black tracking-widest duration-300 ease-in-out hover:font-semibold hover:border-orange-500 hover:text-orange-500">
           register now
         </button>
-      </div>
+      </div> */}
     </>
   );
 };

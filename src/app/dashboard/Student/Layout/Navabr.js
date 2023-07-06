@@ -18,7 +18,7 @@ const Navabr = () => {
     <>
       <header className="w-full relative bg-slate-50 p-1 shadow-md">
         <div className="flex flex-1 justify-between items-center align-middle mx-auto py-2.5">
-          <Link className="mx-4 relative " href="AdminLayouts">
+          <Link className="mx-4 relative " href="/dashboard">
             <Image
               src={logo}
               alt=""
@@ -41,13 +41,13 @@ const Navabr = () => {
             <Link href="/dashboard/rules" className="text-base">
               Our Rules
             </Link>
-            <Link href="dashboard/settings" className="text-base">
+            <Link href="/dashboard/settings" className="text-base">
               Settings
             </Link>
-            <Link href="/" className="text-base">
+            <Link href="#" className="text-base">
               Announcement
             </Link>
-            <Link href="dashboard/question" className="text-base">
+            <Link href="/dashboard/question" className="text-base">
              Comment
             </Link>
             <Link href="#" className="text-base">

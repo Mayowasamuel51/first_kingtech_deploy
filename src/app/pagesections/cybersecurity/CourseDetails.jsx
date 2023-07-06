@@ -6,18 +6,7 @@ const CourseDetails = () => {
                         course details
                 </h2>
                 <p className=" font-normal py-7 text-center opacity-50">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Temporibus, dolores ipsa omnis nemo numquam ab et molestiae, natus
-                    animi earum fugiat. Expedita iste odit minus soluta necessitatibus
-                    asperiores consequatur in ut, magni dolorem corrupti voluptates
-                    ducimus blanditiis nisi. Doloremque aspernatur minus nostrum
-                    explicabo veritatis eligendi odio nemo repudiandae, aperiam aut
-                    rem similique voluptas nisi alias quod esse cumque! Enim, quis.
-                    Sed, corrupti? Suscipit aspernatur illo quo ipsum vero enim fugiat
-                    obcaecati soluta nobis vel consectetur repellendus, laboriosam
-                    inventore reiciendis natus blanditiis eum assumenda nihil, quaerat
-                    ab nostrum aliquid officia dolores esse. Hic fugit iure,
-                    accusantium beatae minima sit doloribus neque.
+                The cybersecurity course provides comprehensive details on various aspects of cybersecurity, covering topics such as network security, ethical hacking, data protection, and risk management. Students will gain in-depth knowledge and practical skills necessary to protect digital assets, detect vulnerabilities, and mitigate cyber threats.
                 </p>
             </div>
         </>

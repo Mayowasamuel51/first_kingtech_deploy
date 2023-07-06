@@ -28,10 +28,12 @@ const Signup = () => {
     }
     useEffect(() => {
         if (session?.status === 'authenticated') {
+            // router.push('http://localhost:3000/dashboard')
             router.push('https://first-kingtech-deploy.vercel.app/dashboard')
         }
     })
     const handleSignIn = () => {
+        // signIn('google', { callbackUrl: 'http://localhost:3000/dashboard' });
         signIn('google',{callbackUrl:'https://first-kingtech-deploy.vercel.app/dashboard'}); 
     };
     const signupSubmit = async (e) => {
@@ -56,6 +58,7 @@ const Signup = () => {
                     toast.error('This email has been registered')
                 } else {
                     router.push('https://first-kingtech-deploy.vercel.app/signin')
+                    // router.push('http://localhost:3000/signin')
                     console.log('worked......')
                     toast.success('proceeding to  signin page ')
                 }

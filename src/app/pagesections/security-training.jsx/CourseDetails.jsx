@@ -6,18 +6,7 @@ const CourseDetails = () => {
                         course details
                 </h2>
                 <p className=" font-normal py-7 text-center opacity-50">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Temporibus, dolores ipsa omnis nemo numquam ab et molestiae, natus
-                    animi earum fugiat. Expedita iste odit minus soluta necessitatibus
-                    asperiores consequatur in ut, magni dolorem corrupti voluptates
-                    ducimus blanditiis nisi. Doloremque aspernatur minus nostrum
-                    explicabo veritatis eligendi odio nemo repudiandae, aperiam aut
-                    rem similique voluptas nisi alias quod esse cumque! Enim, quis.
-                    Sed, corrupti? Suscipit aspernatur illo quo ipsum vero enim fugiat
-                    obcaecati soluta nobis vel consectetur repellendus, laboriosam
-                    inventore reiciendis natus blanditiis eum assumenda nihil, quaerat
-                    ab nostrum aliquid officia dolores esse. Hic fugit iure,
-                    accusantium beatae minima sit doloribus neque.
+                The security practices course provides detailed insights into various aspects of safeguarding systems and data. It covers topics such as risk assessment, threat mitigation, access control, encryption, incident response, and best practices in cybersecurity. Students will gain a comprehensive understanding of security frameworks, practical implementation techniques, and strategies to ensure the confidentiality, integrity, and availability of information assets.
                 </p>
             </div>
         </>

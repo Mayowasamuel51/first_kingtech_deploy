@@ -27,22 +27,22 @@ const Navabr = () => {
 
           {/* <Searchbar /> */}
           <div className="w-full md:flex gap-10 items-center justify-center hidden">
-            <Link href="/dashboard/admin_pages" className="text-base">
+            <Link href="/admin/admin_pages" className="text-base">
               Form Contacts
             </Link>
-            <Link href="/dashboard/admin_pages/register" className="text-base">
+            <Link href="/admin/admin_pages/register" className="text-base">
               Registered Students
             </Link>
 
-            <Link href="/dashboard/admin_pages/broadcast" className="text-base">
+            <Link href="/admin/admin_pages/broadcast" className="text-base">
               Broadcast Messsage
             </Link>
 
-            <Link href="/dashboard/admin_pages/sendlink" className="text-base">
+            <Link href="/admin/admin_pages/sendlink" className="text-base">
             Send link
             </Link>
-            <Link href="/dashboard/a/admin_pages/register" className="text-base">
-              Veiw Questions
+            <Link href="/admin/admin_pages/comments" className="text-base">
+              Veiw Comments
             </Link>
           </div>
           {/* <Notification notif={notif} /> */}

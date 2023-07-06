@@ -7,15 +7,15 @@ const Eligibility = () => {
                 </h2>
 
                 <div className="py-10">
-                    <ul className=' flex flex-col gap-y-3'>
+                <ul className=' flex flex-col gap-y-3'>
                         <li className=" text-opacity-50">
-                            1. Those who are switching career to tech industry.
+                            1. Those who are switching career to cybersecurity industry.
                         </li>
                         <li className=" text-opacity-50">
-                            2. Those who have no prior knowledge on web development but want to learn how to build website and work remotely.
+                            2. Those who have no prior knowledge on cybersecurity but want to learn how to build website and work remotely.
                         </li>
                         <li className=" text-opacity-50">
-                            3. Those who have programming skills but want to take their skill to next level with hands-on projects.
+                            3. For individuals with programming skills seeking to elevate their abilities through practical projects, the cyber course offers an opportunity to take their expertise to the next level..
                         </li>
                     </ul>
                 </div>

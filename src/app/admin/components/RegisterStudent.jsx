@@ -45,9 +45,7 @@ function RegisterStudent({ students }) {
                             <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Date Joined
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
-                                Reviews
-                            </th>
+                         
                          
                         </tr>
                     </thead>
@@ -80,10 +78,10 @@ function RegisterStudent({ students }) {
                                     </td>
 
                                     <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.price}</p>
+                                        <p class="text-gray-900 whitespace-no-wrap">{item.price}sadas</p>
                                     </td>
 
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
+                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm ">
                                         <p class="text-gray-900 whitespace-no-wrap">{item.createdAt}</p>
                                     </td>
                                 </tr>

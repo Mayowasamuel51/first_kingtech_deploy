@@ -55,9 +55,8 @@ const Profile = () => {
       {/* Profile dropdown */}
 
       <div
-        className={`absolute top-[4.5em] right-5 w-[20rem] bg-slate-50 shadow-md z-50 max-h-max rounded-sm sm:p-6 p-10 ${
-          show ? "block" : "hidden"
-        }`}
+        className={`absolute top-[4.5em] right-5 w-[20rem] bg-slate-50 shadow-md z-50 max-h-max rounded-sm sm:p-6 p-10 ${show ? "block" : "hidden"
+          }`}
         style={{
           transitionTimingFunction: "ease-in",
           transitionDelay: "1.5s",
@@ -77,7 +76,7 @@ const Profile = () => {
           ) : (
             <UserCircleIcon className="w-20 h-20" />
           )}
-          <Link className="flex flex-col leading-6 items-center" href="/">
+          <Link className="flex flex-col leading-6 items-center" href="/dashboard">
             <span className="text-[15px] font-medium">
               {session?.user?.name}
             </span>
@@ -104,23 +103,23 @@ const Profile = () => {
         <div className="mt-3">
           <ul className="list-none leading-10">
             <li className="hover:bg-slate-200 hover:px-2 transition">
-              <Link href="/" className="text-[12px]">
-                Live Courses
+              <Link href="/dashboard/rules" className="text-[12px]">
+                Our Rules
               </Link>
             </li>
             <li className="hover:bg-slate-200 hover:px-2 transition">
-              <Link href="/" className="text-[12px]">
+              <Link href="/dashboard/settings" className="text-[12px]">
+                Settings
+              </Link>
+            </li>
+            <li className="hover:bg-slate-200 hover:px-2 transition">
+              <Link href="/dashboard/question" className="text-[12px]">
+                Comment
+              </Link>
+            </li>
+            <li className="hover:bg-slate-200 hover:px-2 transition">
+              <Link href="#" className="text-[12px]">
                 Timetable
-              </Link>
-            </li>
-            <li className="hover:bg-slate-200 hover:px-2 transition">
-              <Link href="/" className="text-[12px]">
-                Class work
-              </Link>
-            </li>
-            <li className="hover:bg-slate-200 hover:px-2 transition">
-              <Link href="/" className="text-[12px]">
-                Notes
               </Link>
             </li>
           </ul>
@@ -164,7 +163,7 @@ const Profile = () => {
               </button>
             </li>
           </ul>
-        </div> 
+        </div>
       </div>
     </>
   );

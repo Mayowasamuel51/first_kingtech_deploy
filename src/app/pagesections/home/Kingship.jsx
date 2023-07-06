@@ -14,7 +14,7 @@ export default function Kingship() {
                         Goal Oriented
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nemo voluptate eum veniam animi inventore mollitia fugit laboriosam obcaecati sit?
+                    Technical skills are in high demand. Over 60% of new jobs worldwide will require tech skills.
                     </p>
                 </div>
 
@@ -23,7 +23,7 @@ export default function Kingship() {
                         Promising
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nemo voluptate eum veniam animi inventore mollitia fugit laboriosam obcaecati sit?
+                    Unlock your earning potential! Entry-level Cybersecurity  in the U.S. earn on average over $120,000  in salary.
                     </p>
                 </div>
                 <div className=" bg-gray-200 rounded-sm p-5 flex flex-col gap-y-2">
@@ -31,7 +31,7 @@ export default function Kingship() {
                         Fun
                     </h3>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae nemo voluptate eum veniam animi inventore mollitia fugit laboriosam obcaecati sit?
+                    Imagine combining your passion and skill with your creativity, and making something new everyday!
                     </p>
                 </div>
 

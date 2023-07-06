@@ -47,7 +47,16 @@ const Courses = () => {
               </span>
               <span className="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-3">
                 <BsFillClockFill className="text-4xl" />
-                <span>10am - 2:30pm</span>
+                {/* <span>10am - 2:30pm</span>
+                 */}
+                    <div className=" flex flex-col">
+                  <p className=" flex flex-col md:flex-row md:gap-x-1">
+                    Mondays & Thursdays<span>(7pm - 9pm)</span>
+                  </p>
+                  <p className=" flex flex-col md:flex-row md:gap-x-1">
+                    Saturday<span>(11am - 1pm)</span>
+                  </p>
+                </div>
               </span>
               <span className="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-3">
                 <SlScreenDesktop className="text-4xl" />

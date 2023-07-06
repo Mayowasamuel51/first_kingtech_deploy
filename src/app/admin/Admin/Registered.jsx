@@ -1,13 +1,14 @@
-import React, { Suspense } from "react";
+import React, { Suspense, cache } from "react";
 import Admi_Layout from "./Admi_Layout";
 import RegisterStudent from "../components/RegisterStudent";
 import NetworkError from "@/app/NetworkError";
 async function fetchregister() {
   const response = await fetch('https://first-kingtech-deploy.vercel.app/api/Admins/register', {
-    cache:'no-store'
+    next:{ revalidate: 20 } 
   })
   // const response = await fetch('http://localhost:3000/api/Admins/register', {
-  //   cache: 'no-store'
+  //   // cache: 'no-store'
+  //   next:{ revalidate: 20 } 
   // })
 
   try {
