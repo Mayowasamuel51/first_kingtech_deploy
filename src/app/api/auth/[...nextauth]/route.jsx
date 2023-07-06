@@ -12,9 +12,9 @@ export const authOptions = {
         GoogleProvider({
             clientId: process.env.GOOGLE_CLIENT_ID,
             clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    
+
         }),
-       
+
         CredentialsProvider({
             name: "credentials",
             credentials: {
@@ -84,11 +84,13 @@ export const authOptions = {
     secret: process.env.SECRET,
     session: {
         strategy: "jwt",
-        expires:'12d'
+        expires: '12d'
     },
     pages: {
-        signIn: 'http://localhost:3000/signin',
-        signOut: 'http://localhost:3000',
+        // signIn: 'http://localhost:3000/signin',
+        signIn: "https://first-kingtech-deploy.vercel.app/signin",
+        // signOut: 'http://localhost:3000',
+        signOut:'https://first-kingtech-deploy.vercel.app',
         error: '/auth/error', // Error code passed in query string as ?error=  build a better error page
         // verifyRequest: '/auth/verify-request', // (used for check email message)
         // newUser: '/auth/new-user' // New users will b  
