@@ -44,13 +44,13 @@ const Navabr = () => {
             <Link href="/dashboard/settings" className="text-base">
               Settings
             </Link>
-            <Link href="#" className="text-base">
+            <Link href="/dashboard" className="text-base">
               Announcement
             </Link>
             <Link href="/dashboard/question" className="text-base">
              Comment
             </Link>
-            <Link href="#" className="text-base">
+            <Link href="/dashboard" className="text-base">
               Timetable
             </Link>
           </div>
