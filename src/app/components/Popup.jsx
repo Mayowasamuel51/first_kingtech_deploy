@@ -17,7 +17,7 @@ const NotificationPopup = () => {
       >
         {(close) => (
           <div className="w-64 bg-white rounded shadow-lg p-4 fixed z-[999] right-10 top-1/3 ">
-            <h3 className="text-lg font-semibold mb-2">Notification</h3>
+            {/* <h3 className="text-lg font-semibold mb-2">Notification</h3> */}
             <p className="text-gray-800 mb-4 text-base">
           <h3 className="font-semibold"> Security+</h3> |   Next Class Starts 24 of July, 2023
               {/* The upcoming class is scheduled to commence on July 24th, 2023. */}
