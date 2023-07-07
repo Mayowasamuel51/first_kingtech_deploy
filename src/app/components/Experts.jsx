@@ -21,37 +21,7 @@ export default function Experts() {
           </p>
         </div>
         <div className="mx-auto py-10 flex flex-wrap gap-10 lg:justify-between justify-center items-center px-5">
-          <div className="bg-white p-16 rounded-lg text-black flex flex-col justify-center items-center">
-            <Image
-              src={Image1}
-              alt=""
-              className="w-[200px] h-[200px] rounded-full object-cover "
-            />
-            <div className="pt-5 grid gap-2">
-              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
-                steve jobs
-              </h2>
-              <p className="text-base font-normal text-center capitalize">
-                mentor
-              </p>
-            </div>
-          </div>
-          <div className="bg-white p-16 rounded-lg text-black flex flex-col justify-center items-center">
-            <Image
-              src={Image2}
-              alt=""
-              className="w-[200px] h-[200px] rounded-full object-cover object-right-bottom"
-            />
-            <div className="pt-5 grid gap-2">
-              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
-                Micheal kean
-              </h2>
-              <p className="text-base font-normal text-center capitalize">
-                mentor
-              </p>
-            </div>
-          </div>
-          <div className="bg-white p-16 rounded-lg text-black flex flex-col justify-center items-center">
+          <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
             <Image
               src={Image3}
               alt=""
@@ -59,13 +29,62 @@ export default function Experts() {
             />
             <div className="pt-5 grid gap-2">
               <h2 className="text-xl font-medium text-center uppercase tracking-wide">
-                Beatrice may
+                Olajuyigbe Oluwadamilola
+
               </h2>
               <p className="text-base font-normal text-center capitalize">
                 mentor
               </p>
             </div>
           </div>
+
+          <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
+            <Image
+              src={Image2}
+              alt=""
+              className="w-[200px] h-[200px] rounded-full object-cover object-right-bottom"
+            />
+            <div className="pt-5 grid gap-2">
+              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
+                Oluwatiroye Amoye
+              </h2>
+              <p className="text-base font-normal text-center capitalize">
+                mentor
+              </p>
+            </div>
+          </div>
+
+          <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
+            <Image
+              src={Image1}
+              alt=""
+              className="w-[200px] h-[200px] rounded-full object-cover "
+            />
+            <div className="pt-5 grid gap-2">
+              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
+                Samuel James
+              </h2>
+              <p className="text-base font-normal text-center capitalize">
+                mentor
+              </p>
+            </div>
+          </div>
+          {/* <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
+            <Image
+              src={Image3}
+              alt=""
+              className="w-[200px] h-[200px] rounded-full object-cover object-right-top"
+            />
+            <div className="pt-5 grid gap-2">
+              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
+              Olajuyigbe Oluwadamilola
+
+              </h2>
+              <p className="text-base font-normal text-center capitalize">
+                mentor
+              </p>
+            </div>
+          </div> */}
         </div>
       </div>
     </section>

@@ -17,7 +17,7 @@ import Why from "./pagesections/home/Why";
 export default function Home() {
   return (
     <main className="homeBody">
-      <Header/>
+      <Header />
       <NotificationPopup />
       <Banner />
       <Why />
@@ -30,7 +30,7 @@ export default function Home() {
       <Apply />
       <About />
       <Contact />
-      <Footer/>
+      <Footer />
     </main>
   )
 }

@@ -8,7 +8,7 @@ export default function Apply() {
                     Start your application today
                 </h3>
                 <p className=" font-semibold text-xl">
-                    Next Class Starts 7.31.2023
+                The upcoming class is scheduled to commence on July 24th, 2023.
                 </p>
                 <Link
                     href="register"

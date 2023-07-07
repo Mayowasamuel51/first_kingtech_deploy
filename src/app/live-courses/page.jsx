@@ -25,8 +25,9 @@ const Courses = () => {
           </h2>
 
           <p className="md:text-xl text-lg text-white font-normal text-center p-10">
-            Welcome to our live courses! Join our learning community and expand
-            your knowledge.
+            {/* Welcome to our live courses! Join our learning community and expand
+            your knowledge. */}
+              We extend a warm welcome to our live courses! Embrace the opportunity to join our vibrant learning community and broaden your horizons.
           </p>
         </div>
       </div>
