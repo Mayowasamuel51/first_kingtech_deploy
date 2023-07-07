@@ -100,8 +100,8 @@ const Signup = () => {
                             <label htmlFor='checkbox' className=' text-sm lg:text-base text-gray-500'>
                                 By signing up, you agree to our
                                 <Link
-                                    href="/"
-                                    className=' text-orange-500'
+                                    href="/terms"
+                                    className=' text-orange-500 pl-2 '
                                 >
                                     terms & conditions
                                 </Link>
