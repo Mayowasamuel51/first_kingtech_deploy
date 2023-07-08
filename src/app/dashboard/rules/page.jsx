@@ -8,7 +8,7 @@ function Rules() {
       return (
         <>
 
-          <section className=" p-8">
+          <section className="p-8">
             {/* NDA */}
             <div className=" my-10">
               <h1 className=" text-center text-3xl uppercase font-semibold">NDA</h1>

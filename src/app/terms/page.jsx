@@ -10,7 +10,7 @@ const Terms = (e) => {
           <section className=" p-8">
             {/* NDA */}
             <div className=" my-10">
-              <h1 className=" text-center text-3xl uppercase font-semibold">NDA</h1>
+              {/* <h1 className=" text-center text-3xl uppercase font-semibold">NDA</h1> */}
               <p className=" mt-4">
                 Effective learning environments require an atmosphere of trust and
                 respect for the intellectual property rights of educators and fellow
