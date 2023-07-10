@@ -27,7 +27,7 @@ const Accordion = ({ title, text }) => {
         )}
       </div>
       {expand && (
-        <div className=" text-[18px] leading-[25px] text-[#495567]  ">
+        <div className=" text-[14px] leading-[25px] text-[#495567]  ">
           {text}
         </div>
       )}
