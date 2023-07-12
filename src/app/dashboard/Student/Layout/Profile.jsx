@@ -154,7 +154,7 @@ const Profile = () => {
             <li className="hover:bg-slate-200 hover:px-2 transition">
               <button
                 onClick={() =>
-                  signOut({ callbackUrl: "https://first-kingtech-deploy.vercel.app" })
+                  signOut({ callbackUrl: "https://kingshiptechnologies.com" })
                   // signOut({ callbackUrl: "http://localhost:3000" })
                 }
                 className="text-[12px]"

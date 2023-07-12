@@ -30,22 +30,22 @@ function FormContact({ contact }) {
                 <table className="min-w-full leading-normal">
                     <thead>
                         <tr>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Name
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Email
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Phone
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Message
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100 text-left text-xs font-semibold text-gray-700 uppercase tracking-wider">
                                 Date
                             </th>
-                            <th class="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
+                            <th className="px-5 py-3 border-b-2 border-gray-200 bg-gray-100"></th>
                         </tr>
                     </thead>
 
@@ -54,11 +54,11 @@ function FormContact({ contact }) {
                         return (
                            
                                 <tr key={item.id}>
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <div class="flex">
+                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <div className="flex">
 
-                                            <div class="ml-3">
-                                                <p class="text-gray-900 whitespace-no-wrap">
+                                            <div className="ml-3">
+                                                <p className="text-gray-900 whitespace-no-wrap">
                                                     {item.name}
                                                 </p>
 
@@ -66,22 +66,22 @@ function FormContact({ contact }) {
                                         </div>
                                     </td>
                                 
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.email}</p>
-                                        {/* <p class="text-gray-600 whitespace-no-wrap">USD</p> */}
+                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p className="text-gray-900 whitespace-no-wrap">{item.email}</p>
+                                        {/* <p className="text-gray-600 whitespace-no-wrap">USD</p> */}
                                     </td>
                               
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.phone}</p>
+                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p className="text-gray-900 whitespace-no-wrap">{item.phone}</p>
 
                                     </td>
                               
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.message}</p>
+                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm">
+                                        <p className="text-gray-900 whitespace-no-wrap">{item.message}</p>
                                     </td>
                                
-                                    <td class="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
-                                        <p class="text-gray-900 whitespace-no-wrap">{item.createdAt}</p>
+                                    <td className="px-5 py-5 border-b border-gray-200 bg-white text-sm text-right">
+                                        <p className="text-gray-900 whitespace-no-wrap">{item.createdAt}</p>
                                     </td>
                                 </tr>
 
@@ -91,7 +91,7 @@ function FormContact({ contact }) {
                     </tbody>
                 </table>
                 {/* <nav aria-label="Page navigation example" role="navigation" >
-                    <ul className="pagination m-4">
+                    <ul classNameName="pagination m-4">
                         <li>
                             <a herf="#" className="page-link" aria-label="Previous" onClick={prePage}> prev</a>
                         </li>

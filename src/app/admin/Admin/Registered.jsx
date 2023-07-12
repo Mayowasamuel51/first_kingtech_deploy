@@ -3,7 +3,7 @@ import Admi_Layout from "./Admi_Layout";
 import RegisterStudent from "../components/RegisterStudent";
 import NetworkError from "@/app/NetworkError";
 async function fetchregister() {
-  const response = await fetch('https://first-kingtech-deploy.vercel.app/api/Admins/register', {
+  const response = await fetch('https://kingshiptechnologies.com/api/Admins/register', {
     next:{ revalidate: 20 } 
   })
   // const response = await fetch('http://localhost:3000/api/Admins/register', {

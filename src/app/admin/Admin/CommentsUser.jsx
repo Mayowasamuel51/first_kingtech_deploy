@@ -5,7 +5,7 @@ import NetworkError from "@/app/NetworkError";
 import Admi_Layout from "./Admi_Layout";
 
 async function fetchcomment() {
-    const response = await fetch('https://first-kingtech-deploy.vercel.app/api/Admins/register', {
+    const response = await fetch('https://kingshiptechnologies.com/api/Admins/register', {
        next:{ revalidate: 10 } 
     })
     // const response = await fetch('http://localhost:3000/api/Admins/comments', {

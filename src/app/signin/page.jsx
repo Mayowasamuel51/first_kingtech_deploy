@@ -16,7 +16,7 @@ const Signin = () => {
     useEffect(() => {
         if (session?.status === 'authenticated') {
             // router.push('http://localhost:3000/dashboard')
-            router.push('https://first-kingtech-deploy.vercel.app/dashboard')
+            router.push('https://kingshiptechnologies.com/dashboard')
             
             
         }
@@ -27,7 +27,7 @@ const Signin = () => {
     })
   
     const handleSignIn = () => {
-        signIn('google',{callbackUrl:'https://first-kingtech-deploy.vercel.app/dashboard'});
+        signIn('google',{callbackUrl:'https://kingshiptechnologies.com/dashboard'});
         // signIn('google',{callbackUrl:'http://localhost:3000/dashboard'}); // Initiates the Google login flow
       };
     const loginUser = async (e) => {

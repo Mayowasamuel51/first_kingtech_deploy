@@ -13,7 +13,7 @@ function AskQ() {
         required: true,
         onUnauthenticated() {
             // redirect('http://localhost:3000/signin?callbackUrl=/dashboard')
-            redirect('https://first-kingtech-deploy.vercel.app/signin?callbackUrl=/dashboard')
+            redirect('https://kingshiptechnologies.com/signin?callbackUrl=/dashboard')
         }
     })
     console.log(session)
