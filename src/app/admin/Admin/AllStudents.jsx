@@ -4,7 +4,7 @@ import ErrorBoundary from "@/app/ErrorBoundary";
 import Error from '../../dashboard/error'
 import NetworkError from "@/app/NetworkError";
 async function fetchContact() {
-  const response = await fetch("http://localhost:3000/api/Admins/contact", {
+  const response = await fetch("https://kingshiptechnologies.com/api/Admins/contact", {
     cache: "no-store",
     mode:"no-cors"
   })
