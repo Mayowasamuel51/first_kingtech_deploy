@@ -8,7 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Head from "next/head"
 import SectionWrapper from "@/app/components/SectionWrapper"
 function Contact() {
-    const notify = () => toast.error("Error Notification !", {
+    const notify = () => toast.error("Server Error !!", {
         position: toast.POSITION.TOP_LEFT
     });
     const good= () => toast.success(" Our representatives will respond to you soon !", {
