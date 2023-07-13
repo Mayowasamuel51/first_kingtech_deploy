@@ -129,21 +129,21 @@ const Profile = () => {
 
         <div className="mt-3">
           <ul className="list-none leading-10">
-            <li className="hover:bg-slate-200 hover:px-2 transition">
+            {/* <li className="hover:bg-slate-200 hover:px-2 transition">
               <Link href={"/"} className="text-[12px]">
                 Review
               </Link>
-            </li>
-            <li className="hover:bg-slate-200 hover:px-2 transition">
+            </li> */}
+            {/* <li className="hover:bg-slate-200 hover:px-2 transition">
               <Link href={"/"} className="text-[12px]">
                 Payments
               </Link>
-            </li>
-            <li className="hover:bg-slate-200 hover:px-2 transition">
+            </li> */}
+            {/* <li className="hover:bg-slate-200 hover:px-2 transition">
               <Link href={"/"} className="text-[12px]">
                 Ask a question
               </Link>
-            </li>
+            </li> */}
           </ul>
         </div>
 

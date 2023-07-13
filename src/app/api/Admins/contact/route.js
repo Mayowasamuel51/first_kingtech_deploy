@@ -1,12 +1,7 @@
 import prisma from '../../../libs/prismadb.jsx'
 import { NextResponse } from 'next/server';
 
-export async function GET() {
-    const data = await prisma.contactus.findMany({
-        orderBy: { id: 'desc' }
-    }) // this code will get the lastest 
-    return NextResponse.json({ data: data, status: 200 })
-}
+
 export async function POST(req) {
     const { name, phone, email, message } = await req.json();
     if (!name || !phone) {
@@ -24,4 +19,11 @@ export async function POST(req) {
     })
     return NextResponse.json({ data: 'data created', status: 200, res: contact })
 
+}
+
+export async function GET() {
+    const data = await prisma.contactus.findMany({
+        orderBy: { id: 'desc' }
+    })
+    return NextResponse.json({ data: data, status: 200 })
 }
