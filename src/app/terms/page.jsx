@@ -8,7 +8,9 @@ const Terms = (e) => {
             <br />
             <br/>
           <section className=" p-8">
-            {/* NDA */}
+          <h1 className=" text-center text-3xl uppercase font-semibold">
+          Privacy Policy
+              </h1>
             <div className=" my-10">
               {/* <h1 className=" text-center text-3xl uppercase font-semibold">NDA</h1> */}
               <p className=" mt-4">
