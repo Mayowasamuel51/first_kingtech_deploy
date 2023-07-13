@@ -20,17 +20,18 @@ export default function Experts() {
             the world need.
           </p>
         </div>
-        <div className="mx-auto py-10 flex flex-wrap gap-10 lg:justify-between justify-center items-center px-5">
-          <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
+        {/* lg:justify-between */}
+        <div className="  mx-auto py-10 flex flex-wrap gap-32  justify-center items-center px-5">
+          <div className=" bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
             <Image
               src={Image3}
               alt=""
+              priority
               className="w-[200px] h-[200px] rounded-full object-cover object-right-top"
             />
             <div className="pt-5 grid gap-2">
-              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
+              <h2 className="text-xl font-medium text-center uppercase ">
               Oluwadamilola  Olajuyigbe 
-
               </h2>
               <p className="text-base font-normal text-center capitalize">
                 mentor
@@ -42,10 +43,11 @@ export default function Experts() {
             <Image
               src={Image2}
               alt=""
+              priority
               className="w-[200px] h-[200px] rounded-full object-cover object-right-bottom"
             />
             <div className="pt-5 grid gap-2">
-              <h2 className="text-xl font-medium text-center uppercase tracking-wide">
+              <h2 className="text-xl font-medium text-center uppercase tracking-wide ">
                 Oluwatiroye Amoye
               </h2>
               <p className="text-base font-normal text-center capitalize">
