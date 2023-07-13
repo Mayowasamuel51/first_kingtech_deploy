@@ -50,7 +50,7 @@ export default function CourseHighlight() {
                         return (
                             <div key={courses.id} className=" flex flex-col gap-y-5 items-center md:items-start md:basis-1/2" ref={ref}>
                                 <div className="">
-                                    <Image src={courses.img} alt="course" />
+                                    <Image   priority src={courses.img} alt="course" />
                                 </div>
                                 <div
                                     className=" flex flex-col gap-y-4 md:items-start md:text-start"
