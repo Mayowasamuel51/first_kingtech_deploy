@@ -54,7 +54,7 @@ export default function Experts() {
             </div>
           </div>
 
-          <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
+          {/* <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
             <Image
               src={Image1}
               alt=""
@@ -68,7 +68,7 @@ export default function Experts() {
                 mentor
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className="bg-white p-9 rounded-lg text-black flex flex-col justify-center items-center">
             <Image
               src={Image3}
