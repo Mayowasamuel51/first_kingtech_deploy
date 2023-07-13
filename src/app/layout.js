@@ -1,5 +1,6 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
+import { Analytics } from '@vercel/analytics/react';
 // components
 import {
   SquarePaymentsForm,
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ErrorBoundary fallback={<Error/>}>
             {children}
+            <Analytics />
           </ErrorBoundary>
         </Provider>
         {/* <Footer /> */}
