@@ -12,7 +12,7 @@ export default function Home() {
     required: true,
     onUnauthenticated() {
       // redirect('http://localhost:3000/signin?callbackUrl=/dashboard')
-      redirect('https://first-kingtech-deploy.vercel.app/signin?callbackUrl=/dashboard')
+      redirect('https://www.kingshiptechnologies.com/signin?callbackUrl=/dashboard')
     } // to redirect back if user not auth well 
   })
   console.log(session)
