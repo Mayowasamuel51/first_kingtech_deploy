@@ -22,6 +22,7 @@ export async function POST(req) {
 }
 
 export async function GET() {
+    
     const data = await prisma.contactus.findMany({
         orderBy: { id: 'desc' }
     })
