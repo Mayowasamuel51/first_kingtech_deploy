@@ -53,6 +53,11 @@ export default function Footer() {
               Register
             </Link>
           </li>
+          <li className=" text-base leading-[22px] text-gray-800">
+            <a href="#instructors" className="">
+              Instructors
+            </a>
+          </li>
           {/* <li className=" text-base leading-[22px] text-gray-800">
             <Link href="/" className="">
               Consultation
@@ -74,11 +79,11 @@ export default function Footer() {
               Our Story
             </Link>
           </li>
-          <li className=" text-base leading-[22px] text-gray-800">
+          {/* <li className=" text-base leading-[22px] text-gray-800">
             <a href="#instructors" className="">
               Instructors
             </a>
-          </li>
+          </li> */}
         </ul>
 
         <ul className=" flex flex-col items-start gap-y-4">
@@ -96,7 +101,7 @@ export default function Footer() {
             </Link>
           </li>
           <li className=" text-base leading-[22px] text-gray-800">
-            <Link href="/" className="">
+            <Link href="/terms" className="">
               Privacy Policy
             </Link>
           </li>

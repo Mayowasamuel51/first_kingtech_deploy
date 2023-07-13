@@ -85,15 +85,15 @@ const Signup = () => {
                     >
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <UserIcon width={25} className=' text-gray-500' />
-                            <input type="text" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter full name' onChange={inputHandle} value={input.name} name='name' />
+                            <input type="text" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter full name' onChange={inputHandle} value={input.name} name='name' required />
                         </div>
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <EnvelopeIcon width={25} className=' text-gray-500' />
-                            <input type="email" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter email address' onChange={inputHandle} value={input.email} name='email' />
+                            <input type="email" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Enter email address' onChange={inputHandle} value={input.email} name='email'  required/>
                         </div>
                         <div className=' flex flex-row items-center gap-x-8 border-b-2 border-gray-500 py-2 w-full'>
                             <LockClosedIcon width={25} className=' text-gray-500' />
-                            <input type="password" className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password' onChange={inputHandle} value={input.hashPassword} name='hashPassword' />
+                            <input type="password" required className=' bg-transparent border-0 text-xl text-gray-500 w-full focus:outline-0' placeholder='Password' onChange={inputHandle} value={input.hashPassword} name='hashPassword' />
                         </div>
                         <div className=' flex items-center gap-x-5 place-self-start'>
                             <input type="checkbox" className=' form-checkbox' name='checkbox' required />
