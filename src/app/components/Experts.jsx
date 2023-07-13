@@ -29,7 +29,7 @@ export default function Experts() {
             />
             <div className="pt-5 grid gap-2">
               <h2 className="text-xl font-medium text-center uppercase tracking-wide">
-                Olajuyigbe Oluwadamilola
+              Oluwadamilola  Olajuyigbe 
 
               </h2>
               <p className="text-base font-normal text-center capitalize">
