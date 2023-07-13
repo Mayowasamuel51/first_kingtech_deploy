@@ -4,7 +4,7 @@ import instructors from  '../../../../public/images/instructors.jpg'
 
 export default function Instructors() {
     return (
-        <section className=" grid grid-cols-1 lg:grid-cols-2">
+        <section className=" grid grid-cols-1 lg:grid-cols-2" id="instructors">
             <Image src={instructors} alt="group of instructors" className=' w-full h-full' />
             <div className=' px-5 py-7 bg-black flex flex-col gap-y-5 md:py-14 md:px-14 lg:gap-y-10'>
                 <h2 className=' capitalise text-xl font-semibold text-white md:text-3xl'>

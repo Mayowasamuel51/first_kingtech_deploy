@@ -37,7 +37,7 @@ export default function Footer() {
             {socials.map(({ id, socialMedia }) => {
               return (
                 <Link href="/" key={id} className=" text-2xl">
-                  {socialMedia}
+                  {socialMedia} 
                 </Link>
               );
             })}
@@ -53,15 +53,15 @@ export default function Footer() {
               Register
             </Link>
           </li>
-          <li className=" text-base leading-[22px] text-gray-800">
+          {/* <li className=" text-base leading-[22px] text-gray-800">
             <Link href="/" className="">
               Consultation
             </Link>
-          </li>
+          </li> */}
           <li className=" text-base leading-[22px] text-gray-800">
-            <Link href="blog" className="">
+            {/* <Link href="blog" className="">
               Blog
-            </Link>
+            </Link> */}
           </li>
         </ul>
 
@@ -75,9 +75,9 @@ export default function Footer() {
             </Link>
           </li>
           <li className=" text-base leading-[22px] text-gray-800">
-            <Link href="/" className="">
+            <a href="#instructors" className="">
               Instructors
-            </Link>
+            </a>
           </li>
         </ul>
 
@@ -86,9 +86,9 @@ export default function Footer() {
             Help
           </li>
           <li className=" text-base leading-[22px] text-gray-800">
-            <Link href="/" className="">
+            <a href="#contact"className="">
               Contact Us
-            </Link>
+            </a>
           </li>
           <li className=" text-base leading-[22px] text-gray-800">
             <Link href="faqs" className="">
