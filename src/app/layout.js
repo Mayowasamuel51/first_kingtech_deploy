@@ -27,16 +27,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
 
       <body
-        className={inter.className}
-      >
-        {/* <Header /> */}
+        className={inter.className}   >
         <Provider>
           <ErrorBoundary fallback={<Error/>}>
             {children}
             <Analytics />
           </ErrorBoundary>
         </Provider>
-        {/* <Footer /> */}
       </body>
     </html>
   )

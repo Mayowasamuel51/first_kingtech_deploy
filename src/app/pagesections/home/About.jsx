@@ -13,7 +13,7 @@ export default function About() {
             </h1>
             <div className=' flex flex-col items-center gap-y-8 lg:flex-row lg:items-stretch lg:gap-x-10'>
                 <div className=' basis-1/2'>
-                    <Image src={about} alt=" about Kingship" />
+                    <Image fill src={about} alt=" about Kingship" priority />
                 </div>
                 <div className=' basis-1/2 flex flex-col gap-y-10'>
                     <p className=' text-center lg:text-start'>
