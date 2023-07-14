@@ -39,12 +39,12 @@ export default function Banner() {
               We train the next tech generation on the most innovative and
               recent technologies
             </p>
-            <p className="text-sm text-center text-white mb-16 font-bold md:text-lg">
+            <p className="text-sm text-center text-white mb-6 font-bold md:text-lg">
               Certified in Cybersecurity | Security plus training
             </p>
-            {/* <p className="text-sm text-center text-white mb-16 font-bold md:text-lg">
-            Security Plus |   Next Class Starts 24 of July, 2023
-            </p> */}
+            <p className="text-sm text-center text-white mb-2 font-bold sm:text-lg lg:hidden md:hidden">
+              Security Plus |   Next Class Starts 24 of July, 2023
+            </p>
             <div className=" flex flex-col items-center gap-y-5 w-full mb-5 md:flex-row md:justify-center md:gap-x-5">
               <Link
                 href="/mentorship"
