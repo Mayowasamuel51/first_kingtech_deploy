@@ -12,10 +12,22 @@ import Experts from "../components/Experts";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import SectionWrapper from "../components/SectionWrapper";
+import Head from "next/head";
+export const metadata = {
+  title: 'Live-courses Kingship Technologies',
+  description: 'Cyber Security e-learning platform',  
+  keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
+  content:"Discover the importance of cybersecurity in the digital age and learn about effective strategies and practices to safeguard your online presence. Explore expert tips, tools, and resources to protect your personal information, defend against cyber threats, and navigate the evolving landscape of online security." 
+}
+
 const Courses = () => {
   return (
     <>
       {/* <Header /> */}
+      <Head>
+        <title>live-courses</title>
+        <meta   content="Discover the importance of cybersecurity in the digital age and learn about effective strategies and practices to safeguard your online presence. Explore expert tips, tools, and resources to protect your personal information, defend against cyber threats, and navigate the evolving landscape of online security." title="Enhancing Online Security: Exploring the World of Cybersecurity"></meta>
+      </Head>
       <div className="w-full">
       <div className="bg-hero-desktop bg-no-repeat bg-cover min-h-screen flex justify-center items-center flex-col">
         <div className="absolute bg-black/50 w-full min-h-screen top-0 left-0"></div>

@@ -3,6 +3,12 @@ import Image from "next/image";
 // images
 import register from '../../../public/images/register.png'
 import SectionWrapper from "../components/SectionWrapper";
+export const metadata = {
+    title: 'Register  Kingship Technologies',
+    description: 'Cyber Security e-learning platform',  
+    keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
+    content:" Prepare for the Security+ certification exam with our comprehensive guide. Learn essential cybersecurity concepts, network security, cryptography, and risk management. Gain the knowledge and skills needed to protect networks, identify vulnerabilities, and respond to security incidents. Start your journey towards a rewarding cybersecurity career today." 
+  }
 const Welcome = () => {
     return (
         <section className=' bg-orange-50 min-h-screen flex flex-col justify-center items-center px-5 pt-24 md:px-14'>

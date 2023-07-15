@@ -9,7 +9,12 @@ import { SlScreenDesktop } from "react-icons/sl";
 import SectionWrapper from "../components/SectionWrapper";
 import Experts from "../components/Experts";
 import Contact from "../pagesections/home/Contact";
-
+export const metadata = {
+  title: 'Mentorship Kingship Technologies',
+  description: 'Cyber Security e-learning platform',  
+  keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
+  content:" Join our mentorship program in cybersecurity to enhance your skills and gain valuable industry guidance. Expert mentors and hands-on projects. Apply now!" 
+}
 const Mentorship = () => {
   return (
     <div className="w-full">
