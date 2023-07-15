@@ -3,10 +3,10 @@ import Image from "next/image"
 // library
 import { FaQuoteRight, FaQuoteLeft } from "react-icons/fa"
 // assests
-import testimonyOne from  "../../assets/one.jpg"
-    // "../../../../public/images/testimonialOne.jpg"
+import testimonyOne from "../../assets/one.jpg"
+// "../../../../public/images/testimonialOne.jpg"
 import testimonyTwo from "../../assets/three.jpg"
-    // "../../../../public/images/testimonialTwo.jpg"
+// "../../../../public/images/testimonialTwo.jpg"
 
 import testimonyThree from "../../../../public/images/testimonialThree.jpg"
 import testimonyFour from "../../../../public/images/testimonialFour.jpg"
@@ -64,47 +64,48 @@ export default function Testimonials() {
 
     return (
         <section className=" px-5 py-14 md:px-14 md:py-24">
+
           
             <h1 className=" capitalise text-xl font-semibold mb-10 text-center bg-gradient-to-r from-orange-500 to-black bg-auto bg-clip-text text-transparent md:text-3xl lg:mb-16">
                 Testimonials
             </h1>
             <Swiper
-                    spaceBetween={30}
-                    centeredSlides={true}
-                    loop={true}
-                    autoplay={{
-                        delay: 3500,
-                        disableOnInteraction: false,
-                    }}
-                    pagination={{
-                        clickable: true,
-                    }}
-                    modules={[Autoplay, Pagination]}
-                    className=" grid grid-cols-1 items-center gap-y-5 md:grid-cols-2 md:items-stretch md:gap-x-5 lg:grid-cols-3"
-                >
-                    {testimonies.map(({ id, img, p, h4 }) => {
-                        return (
-                            <SwiperSlide key={id} className=" pb-10">
-                                <div className=" flex flex-col items-center gap-y-5 max-w-screen-md mx-auto boxShadow p-5 rounded-md ">
-                                    <div className=" w-[100px] h-[100px] overflow-hidden rounded-[50%]">
-                                        {/* <img src={img} alt="" className=" w-full h-full object-cover" /> */}
-                                        <Image src={img} alt="people" priority className=" w-full h-full object-cover" />
-                                    </div>
-                                    <h4 className=" text-lg font-medium">
-                                        {h4}
-                                    </h4>
-                                    <div className=" flex flex-col items-center gap-y-3">
-                                        <FaQuoteLeft size={30} color="gray" />
-                                        <p className=" text-sm opacity-75 text-center line-clamp-3">
-                                            {p}
-                                        </p>
-                                        <FaQuoteRight size={30} color="gray" />
-                                    </div>
+                spaceBetween={30}
+                centeredSlides={true}
+                loop={true}
+                autoplay={{
+                    delay: 3500,
+                    disableOnInteraction: false,
+                }}
+                pagination={{
+                    clickable: true,
+                }}
+                modules={[Autoplay, Pagination]}
+                className=" grid grid-cols-1 items-center gap-y-5 md:grid-cols-2 md:items-stretch md:gap-x-5 lg:grid-cols-3"
+            >
+                {testimonies.map(({ id, img, p, h4 }) => {
+                    return (
+                        <SwiperSlide key={id} className=" pb-10">
+                            <div className=" flex flex-col items-center gap-y-5 max-w-screen-md mx-auto boxShadow p-5 rounded-md ">
+                                <div className=" w-[100px] h-[100px] overflow-hidden rounded-[50%]">
+                                    {/* <img src={img} alt="" className=" w-full h-full object-cover" /> */}
+                                    <Image src={img} alt="people" priority className=" w-full h-full object-cover" />
                                 </div>
-                            </SwiperSlide>
-                        )
-                    })}
-                </Swiper>
+                                <h4 className=" text-lg font-medium">
+                                    {h4}
+                                </h4>
+                                <div className=" flex flex-col items-center gap-y-3">
+                                    <FaQuoteLeft size={30} color="gray" />
+                                    <p className=" text-sm opacity-75 text-center line-clamp-3">
+                                        {p}
+                                    </p>
+                                    <FaQuoteRight size={30} color="gray" />
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                    )
+                })}
+            </Swiper>
         </section>
     )
 }

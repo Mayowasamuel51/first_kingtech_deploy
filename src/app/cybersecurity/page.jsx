@@ -13,7 +13,7 @@ function Cybersecurity() {
     <main>
       <Head>
         <title>cybersecurity</title>
-        <meta  content="Discover the importance of cybersecurity in the digital age and learn about effective strategies and practices to safeguard your online presence. Explore expert tips, tools, and resources to protect your personal information, defend against cyber threats, and navigate the evolving landscape of online security." title="Enhancing Online Security: Exploring the World of Cybersecurity"></meta>
+        <meta   content="Discover the importance of cybersecurity in the digital age and learn about effective strategies and practices to safeguard your online presence. Explore expert tips, tools, and resources to protect your personal information, defend against cyber threats, and navigate the evolving landscape of online security." title="Enhancing Online Security: Exploring the World of Cybersecurity"></meta>
       </Head>
       <Banner />
       <div className="py-20">
