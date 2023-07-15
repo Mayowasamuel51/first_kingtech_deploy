@@ -9,12 +9,12 @@ import SectionWrapper from '../components/SectionWrapper'
 import signin from '../../../public/images/signin.png'
 import { useEffect, useState } from 'react'
 import { useRouter } from "next/navigation"
-export const metadata = {
-    title: 'Sigin Kingship Technologies',
-    description: 'Cyber Security e-learning platform',  
-    keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
-    content:" Prepare for the Security+ certification exam with our comprehensive guide. Learn essential cybersecurity concepts, network security, cryptography, and risk management. Gain the knowledge and skills needed to protect networks, identify vulnerabilities, and respond to security incidents. Start your journey towards a rewarding cybersecurity career today." 
-  }
+// export const metadata = {
+//     title: 'Sigin Kingship Technologies',
+//     description: 'Cyber Security e-learning platform',  
+//     keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
+//     content:" Prepare for the Security+ certification exam with our comprehensive guide. Learn essential cybersecurity concepts, network security, cryptography, and risk management. Gain the knowledge and skills needed to protect networks, identify vulnerabilities, and respond to security incidents. Start your journey towards a rewarding cybersecurity career today." 
+//   }
 const Signin = () => {
     const session = useSession()
     const router = useRouter()
