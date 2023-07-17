@@ -21,9 +21,7 @@ const Signin = () => {
     useEffect(() => {
         if (session?.status === 'authenticated') {
             // router.push('http://localhost:3000/dashboard')
-            router.push('https://kingshiptechnologies.com/dashboard')
-            
-            
+            router.push('https://kingshiptechnologies.com/dashboard')     
         }
     })
     const [data, setData] = useState({

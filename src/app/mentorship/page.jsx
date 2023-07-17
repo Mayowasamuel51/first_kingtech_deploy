@@ -13,12 +13,12 @@ export const metadata = {
   title: 'Mentorship Kingship Technologies',
   description: 'Cyber Security e-learning platform',  
   keywords: "cybersecurity training, cybersecurity courses, information security, cyber defense, network security, ethical hacking, penetration testing, data privacy",
-  content:" Join our mentorship program in cybersecurity to enhance your skills and gain valuable industry guidance. Expert mentors and hands-on projects. Apply now!" 
+  content:"Join our mentorship program in cybersecurity to enhance your skills and gain valuable Industry guidance. Expert mentors and hands-on projects. Apply now!" 
 }
 const Mentorship = () => {
   return (
     <div className="w-full">
-      <section className=" bg-aboutBanner bg-cover bg-no-repeat pb-10 min-h-screen relative">
+      <section className="bg-aboutBanner bg-cover bg-no-repeat pb-10 min-h-screen relative">
         <div className="absolute bg-black/50 w-full h-full top-0 left-0"></div>
         <div className="md:pt-72 pt-32 text-white text-xl font-semibold absolute mx-auto w-full h-full flex flex-col gap-y-10 px-5 md:px-14">
           <h2 className="lg:text-5xl md:text-3xl text-3xl font-bold text-center uppercase leading-normal mb-5 mt-5">

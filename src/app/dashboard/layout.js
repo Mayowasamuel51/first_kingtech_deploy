@@ -1,7 +1,5 @@
 import "./globals.css";
 import { Inter } from "next/font/google";
-import Navbar from './Student/Layout/Navabr'
-import Provider from "../SessionProvider";
 const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Kingship Technologies",
@@ -14,10 +12,7 @@ export default function RootLayout({ children }) {
         className=
         {inter.className}
         style={{ fontFamily: 'Montserrat' }}>
-        {/* <Provider> */}
           {children}
-        {/* </Provider> */}
-
       </body>
     </html>
   );
