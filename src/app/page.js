@@ -10,9 +10,9 @@ import CourseHighlight from "./pagesections/home/CourseHighlight";
 import Instructors from "./pagesections/home/Instructors";
 import Kingship from "./pagesections/home/Kingship";
 import Mentorship from "./pagesections/home/Mentorship";
+import Project from "./pagesections/home/Project";
 import Testimonials from "./pagesections/home/Testimonials";
 import Why from "./pagesections/home/Why";
-
 
 export default function Home() {
   return (
@@ -23,6 +23,7 @@ export default function Home() {
       <Why />
       <CourseHighlight />
       <Mentorship />
+      <Project />
       <Benefits />
       <Kingship />
       <Testimonials />
@@ -32,5 +33,5 @@ export default function Home() {
       <Contact />
       <Footer />
     </main>
-  )
+  );
 }
