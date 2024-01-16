@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ErrorBoundary fallback={<Error />}>
             {children}
+            
             <Analytics />
           </ErrorBoundary>
         </Provider>
