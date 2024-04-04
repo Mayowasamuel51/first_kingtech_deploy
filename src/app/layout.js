@@ -7,7 +7,7 @@ import Provider from './SessionProvider';
 import Error from './error';
 import GoogleTagManager from './Google';
 import Head from 'next/head';
-import Microsoft from './Microsoft';
+// import Microsoft from './Microsoft';/
 const inter = Inter({ subsets: ['latin'] })
 export const metadata = {
   title: 'Kingship Technologies',
@@ -28,7 +28,7 @@ export default function RootLayout({ children }) {
         <Provider>
           <ErrorBoundary fallback={<Error />}>
             {children}
-            <Microsoft/>
+            {/* <Microsoft/> */}
             <Analytics />
           </ErrorBoundary>
         </Provider>
