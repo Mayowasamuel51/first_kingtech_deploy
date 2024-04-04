@@ -24,7 +24,7 @@ export default function Footer() {
           <div className=" flex flex-row items-center gap-x-4">
             <Image src={phone} alt="phone" />
             <p className=' font-["Open Sans"] text-base text-gray-800'>
-              Phone: 443-768-8300
+              Phone: 443-768-8300 /+2348160587687
             </p>
           </div>
           <div className=" flex flex-row items-center gap-x-4">
