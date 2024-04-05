@@ -42,7 +42,7 @@ const Mentorship = () => {
           </h2>
 
           <div className="py-7">
-            <h2 className=" text-lg font-normal opacity-80">
+            <h2 className=" text-lg font-bold  opacity-80">
               This is a 5 week mentorship program in Career Development. We help
               guide you in your professional career especially if you need next
               steps before or after getting certified. Our instructors will
