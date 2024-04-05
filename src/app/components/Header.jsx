@@ -7,7 +7,8 @@ import Link from 'next/link'
 import { motion, AnimatePresence } from 'framer-motion';
 import { Bars3BottomRightIcon, XMarkIcon, ChevronUpIcon, ChevronDownIcon } from '@heroicons/react/24/solid'
 
-import logo from '../../../public/images/logo.png'
+// import logo from '../../../public/images/logo.png'
+import logo from "../../../public/images/new.jpg"
 import Image from 'next/image';
 
 // components
@@ -67,7 +68,8 @@ export default function Header() {
         <>
             <nav className=' px-5 py-1 flex items-center justify-between fixed w-full shadow-lg bg-white z-50 md:px-14'>
                 <Link href="/">
-                    <Image src={logo} alt='logo' className='w-14' />
+                    <Image src={logo} alt='logo' className='w-20 ' />
+                  
                 </Link>
 
                 <div className=' hidden md:flex md:flex-row md:items-center md:gap-x-10'>
@@ -115,6 +117,12 @@ export default function Header() {
                                                 className=' text-white hover:border-b-2 hover:border-b-orange-500'
                                             >
                                                 Security Training
+                                            </Link>
+                                            <Link
+                                                href="/python"
+                                                className=' text-white hover:border-b-2 hover:border-b-orange-500'
+                                            >
+                                            Python Training
                                             </Link>
                                             <Link
                                                 href="/mentorship"

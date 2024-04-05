@@ -3,6 +3,8 @@
 
 const nextConfig ={
     reactStrictMode: true,
+    fastRefresh: true,
+    concurrentFeatures: true,
     swcMinify: true,
     images: {
       unoptimized: true,
