@@ -43,7 +43,7 @@ export default function Banner() {
               Certified in Cybersecurity | Security plus training
             </p>
             <p className="text-sm text-center text-white mb-2 font-bold sm:text-lg lg:hidden md:hidden">
-              Security Plus |   Next Class Starts 15 of July, 2023
+              Security Plus |   Next Class Starts 6 of May, 2024
             </p>
             <div className=" flex flex-col items-center gap-y-5 w-full mb-5 md:flex-row md:justify-center md:gap-x-5">
               <Link
